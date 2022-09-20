@@ -1,0 +1,5 @@
+enum (FirstSubway) {
+  description (__DESCRIPTION__)
+  symbol (첫 차)
+  symbol (첫차)
+}

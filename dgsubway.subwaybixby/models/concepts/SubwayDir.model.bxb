@@ -1,0 +1,4 @@
+text (SubwayDir) {
+  description (방면 역 이름)
+  extends (SubwayName)
+}

@@ -1,0 +1,3 @@
+integer (LeftTime) {
+  description (현재 시간으로부터 몇 분 남았는지 시간)
+}
