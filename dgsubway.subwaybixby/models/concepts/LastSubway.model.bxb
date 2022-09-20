@@ -1,4 +1,0 @@
-enum (LastSubway) {
-  description (막차)
-  symbol (막차)
-}
