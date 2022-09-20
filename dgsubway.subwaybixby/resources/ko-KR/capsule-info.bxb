@@ -1,0 +1,15 @@
+capsule-info {
+  display-name (대구지하철 열차정보)
+  description ("대구지하철 열차가 언제 도착하는지, 첫차/막차는 언제 오는지 알려주는 빅스비 기능입니다.")
+  developer-name (대프리카김밥천국)
+  website-url (https://github.com/barahana20/2022_hackathon)
+  icon-asset (/assets/path/to/icon.png)
+  dispatch-name(대구지하철 1호선)
+  dispatch-aliases{
+    alias (대구지하철 열차정보)
+  }
+  search-keywords {
+    keyword (대구지하철)
+    keyword (열차정보)
+  }
+}

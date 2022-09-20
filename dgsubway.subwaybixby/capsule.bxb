@@ -15,9 +15,14 @@ capsule {
     }
   }
   store-countries {
-    all
+    only{
+      allow(KR)
+    }
   }
   device-models {
     all
+  }
+  store-sections{
+    section (TravelAndTransportation)
   }
 }
