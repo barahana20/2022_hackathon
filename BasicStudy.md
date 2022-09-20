@@ -15,3 +15,11 @@
 
   - Submission  하는 방법 
     -  VIew 에서 Submission 하면, 실제 빅스비 서비스에 등록될 수 있다. 
+
++ 추가적인 IDE 기능
+  - Open Debug Console : 코드에 대한 디버깅 가능.
+  - Open Simulation Debugging 
+    - 어떤 사용자의 말에 반응하도록 트레이닝하는지 : resource.training으로 만든다. 사용자가 어떤 말을 했을 때 어떻게 트레이닝하는지 내용이다. 
+    - ex) 버거 둘 콜라 하나 주문해줘 라고 보냈을 때, NL 모델에 complie 되는지 처리함. 시뮬레이터 실행할려면 open in simulator 화면에다가 처리한다. 
+
+  - Command Palette : 팔레트 창을 통해서 쉽게 실행가능하다. 
