@@ -1,0 +1,12 @@
+action (SubwayThree) {
+  description (~~역 첫차 or ~~역 막차)
+  // 2개 방면 첫차 or 막차 시간 알려주기
+  collect {
+    input (subwayName) {
+      type (SubwayName)
+      min (Optional) max (One)
+    }
+  }
+  type (Search)
+  output (SubwayThree3)
+}

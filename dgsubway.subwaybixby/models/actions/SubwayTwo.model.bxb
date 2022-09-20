@@ -1,0 +1,16 @@
+action (SubwayTwo) {
+  description ("~~역 ~~방향(가르쳐 줘)")
+  // 1개 방면 도착정보 2개씩(몇분 남았는지), with 첫차막차 시간 대답으로 띄우기
+  collect {
+    input (subwayName) {
+      type (SubwayName)
+      min (Required) max (One)
+    }
+    input (subwayDir) {
+      type (SubwayDir)
+      min (Optional) max (One)
+    }
+  }
+  type (Search)
+  output (SubwayTwo2)
+}

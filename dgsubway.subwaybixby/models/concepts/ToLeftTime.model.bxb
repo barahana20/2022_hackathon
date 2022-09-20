@@ -1,0 +1,3 @@
+integer (ToLeftTime) {
+  description (__DESCRIPTION__)
+}
