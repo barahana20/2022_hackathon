@@ -52,4 +52,13 @@
   - 사용자 말에서 중요하게 생각되어야 하는 내용들이 들어가서 진행됨을 알 수 있었다. 
   - 비즈니스 로직은, code에서 js 파일을 이용해 짤 수 있다. 
 
+#### Tip : Resource 소개
+
++ Bixby Developer Center : Getting Started 부터 Sample까지, bixbydevelopers.com 에서 공부할 수 있는 내용이 있다. 구글링을 하는 것도 좋지만, 여기서 확인해 보는것도 좋을 것이다. 
+
++ Bixby Developer Github : 샘플코드들을 모아놓은 Repo들이다. 한국 샘플들도 많으니 참고하면 될듯하다. 깃헙에서 코드 많이 찾아보는것도 좋을 것 같다. 
+
++ More info : 
+  - support@bixbydevelopers.com 
+  - support.bixbydevelopers.com
 
