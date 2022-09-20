@@ -1,0 +1,33 @@
+# [발화 함수 : Action] 
+
+# PrintResult 
+
+ 
+
+# [발화 변수 : Input Concept] 
+
+# ~~역 : SubwayName Required 
+
+# ~~방향 : SubwayDir Optional 
+
+# 첫차 FirstSubway Optional 
+
+# 막차 LastSubway Optional 
+
+ 
+
+# [발화 변수 : Output Concept] 
+
+# ~~방면 : SubwayDir 
+
+# 첫차 시간 : SubwayFirstTime 
+
+# 막차 시간 : SubwayLastTime 
+
+# 해당 역 도착 시간 : SubwayArrivedTime 
+
+# 현재 시간으로부터 몇 분 남았는지 시간 : LeftTime 
+
+ 
+
+딕셔너리 형태 혹은 구조체로 만들 수 있으면 만들기 => {SubwayDir: [SubwayFirstTime, SubwayLastTime, SubwayArrivedTime, LeftTime]}
