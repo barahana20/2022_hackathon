@@ -5,8 +5,7 @@ structure (Time) {
     min (Required) max (One)
   }
   property (minute){
-    type(Minute){
-      min(Required) max(One)
-    }
+    type(Minute)
+    min(Required) max(One)
   }
 }

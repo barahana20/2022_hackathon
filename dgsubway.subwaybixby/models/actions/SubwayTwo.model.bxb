@@ -12,5 +12,5 @@ action (SubwayTwo) {
     }
   }
   type (Search)
-  output (SubwayTwo2)
+  output (SubwayResult2)
 }
