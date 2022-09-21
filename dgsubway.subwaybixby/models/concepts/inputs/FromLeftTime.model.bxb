@@ -1,3 +1,3 @@
-text (ToSubwayTime) {
+Time (FromLeftTime) {
   description (__DESCRIPTION__)
 }

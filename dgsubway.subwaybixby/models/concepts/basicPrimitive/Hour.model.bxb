@@ -1,0 +1,3 @@
+integer (Hour) {
+  description ("몇 '시'를 정의하는 integer")
+}

@@ -1,3 +1,3 @@
-text (FromSubwayTime) {
+Time (FromSubwayTime) {
   description (__DESCRIPTION__)
 }

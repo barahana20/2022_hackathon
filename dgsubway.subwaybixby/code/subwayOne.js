@@ -1,4 +1,5 @@
-import console from 'console';
-export default function (subwayName) {
-  return subwayName;
+module.exports.function = function subwayOne(subwayName){
+
+  SubwayOne1 subwayOne = 
+
 }
