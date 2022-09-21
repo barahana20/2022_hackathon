@@ -11,10 +11,10 @@ structure (SubwayResult2) {
   }
   property (secondArrivalTime) {
     type (RightDirectionArrivalTime)
-    min (Required) max (One)
+    min (Optional) max (One)
   }
   property (secondLeftTime) {
     type (RightDirectionLeftTime)
-    min (Required) max (One)
+    min (Optional) max (One)
   }
 }
