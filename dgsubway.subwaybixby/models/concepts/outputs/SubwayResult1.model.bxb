@@ -3,18 +3,18 @@ structure (SubwayResult1) {
   // 양 방향 도착정보 1개씩(몇분 남았는지), with 첫차막차 시간 대답으로 띄우기
   property (leftDirectionArrivalTime) {
     type (LeftDirectionArrivalTime)
-    min (Optional) max (One)
+    min (Required) max (One)
   }
   property (leftDirectionLeftTime) {
     type (LeftDirectionLeftTime)
-    min (Optional) max (One)
+    min (Required) max (One)
   }
   property (rightDirectionArrivalTime) {
     type (RightDirectionArrivalTime)
-    min (Optional) max (One)
+    min (Required) max (One)
   }
   property (rightDirectionLeftTime) {
     type (RightDirectionLeftTime)
-    min (Optional) max (One)
+    min (Required) max (One)
   }
 }
