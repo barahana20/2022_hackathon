@@ -113,10 +113,13 @@ class SubwayMethod:
                 
                 if now < subwaytime1:
                     left_time1 = subwaytime1.minute - now.minute
-                    if type(arrival_time[str(int(i)+1)].values[0]) == str and ':' in arrival_time[str(int(i)+1)].values[0]:
-                        subwaytime2 = str(arrival_time[str(int(i)+1)].values[0])
-                    else:
-                        continue
+                    try:
+                        if type(arrival_time[str(int(i)+1)].values[0]) == str and ':' in arrival_time[str(int(i)+1)].values[0]:
+                            subwaytime2 = str(arrival_time[str(int(i)+1)].values[0])
+                        else:
+                            continue
+                    except:
+                        break
                     subwaytime2 = datetime.strptime(subwaytime2, "%H:%M:%S")
                     left_time2 = subwaytime2.minute - now.minute
                     return (subwaytime1.strftime("%H:%M:%S"), left_time1, subwaytime2.strftime("%H:%M:%S"), left_time2)
