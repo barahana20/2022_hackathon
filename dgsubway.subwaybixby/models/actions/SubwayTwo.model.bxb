@@ -8,7 +8,7 @@ action (SubwayTwo) {
     }
     input (subwayDir) {
       type (SubwayDir)
-      min (Optional) max (One)
+      min (Required) max (One)
     }
   }
   type (Search)

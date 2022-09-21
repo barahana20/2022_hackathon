@@ -1,19 +1,19 @@
 structure (SubwayResult2) {
   description ("~~역 ~~방향(가르쳐 줘)")
   // 1개 방면 도착정보 2개씩(몇분 남았는지), with 첫차막차 시간 대답으로 띄우기
-  property (leftDirectionArrivalTime) {
+  property (firstArrivalTime) {
     type (LeftDirectionArrivalTime)
     min (Required) max (One)
   }
-  property (leftDirectionLeftTime) {
+  property (firstLeftTime) {
     type (LeftDirectionLeftTime)
     min (Required) max (One)
   }
-  property (rightDirectionArrivalTime) {
+  property (secondArrivalTime) {
     type (RightDirectionArrivalTime)
     min (Required) max (One)
   }
-  property (rightDirectionLeftTime) {
+  property (secondLeftTime) {
     type (RightDirectionLeftTime)
     min (Required) max (One)
   }
