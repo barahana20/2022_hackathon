@@ -2,12 +2,55 @@ from flask import Flask, request
 from subway_method import SubwayMethod
 
 app = Flask(__name__)
-
+subwaymethod = SubwayMethod()
 @app.route('/one')
-def index():
+def one():
     subwayname = request.args.get('subwayname')
-    
-    return {}
+    leftDirectionArrivalTime, leftDirectionLeftTime, rightDirectionArrivalTime, rightDirectionLeftTime = subwaymethod.one(subwayname)
+    return {
+        'leftDirectionArrivalTime': leftDirectionArrivalTime,
+        'leftDirectionLeftTime': leftDirectionLeftTime,
+        'rightDirectionArrivalTime': rightDirectionArrivalTime,
+        'rightDirectionLeftTime': rightDirectionLeftTime
+    }
+ 
+@app.route('/two')
+def two():
+    subwayname = request.args.get('subwayname')
+    subwaydir = request.args.get('subwaydir')
+    leftDirectionArrivalTime, leftDirectionLeftTime, rightDirectionArrivalTime, rightDirectionLeftTime = subwaymethod.two(subwayname, subwaydir)
+    return {
+        'leftDirectionArrivalTime': leftDirectionArrivalTime,
+        'leftDirectionLeftTime': leftDirectionLeftTime,
+        'rightDirectionArrivalTime': rightDirectionArrivalTime,
+        'rightDirectionLeftTime': rightDirectionLeftTime
+    }
+ 
+@app.route('/three')
+def three():
+    subwayname = request.args.get('subwayname')
+    leftDirectionFirstTime, leftDirectionLastime = subwaymethod.return_first_last_train_time(subwayname, '상')
+    rightDirectionFirstTime, rightDirectionLastTime = subwaymethod.return_first_last_train_time(subwayname, '하')
+
+    return {
+        'leftDirectionFirstTime': leftDirectionFirstTime,
+        'leftDirectionLastime': leftDirectionLastime,
+        'rightDirectionFirstTime': rightDirectionFirstTime,
+        'rightDirectionLastTime': rightDirectionLastTime
+    }
+  
+@app.route('/four')
+def four():
+    subwayname = request.args.get('subwayname')
+    subwaydir = request.args.get('subwaydir')
+    DirectionFirstTime, DirectionLastime = subwaymethod.return_first_last_train_time(subwayname, subwaydir)
+
+    return {
+        'DirectionFirstTime': DirectionFirstTime,
+        'DirectionLastime': DirectionLastime
+    }
+ 
+
  
 @app.route('/about')
 def about():
