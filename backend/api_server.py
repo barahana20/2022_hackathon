@@ -43,11 +43,11 @@ def three():
 def four():
     subwayname = request.args.get('subwayname')
     subwaydir = request.args.get('subwaydir')
-    DirectionFirstTime, DirectionLastime = subwaymethod.return_first_last_train_time(subwayname, subwaydir)
+    DirectionFirstTime, DirectionLastTime = subwaymethod.return_first_last_train_time(subwayname, subwaydir)
 
     return {
         'DirectionFirstTime': DirectionFirstTime,
-        'DirectionLastime': DirectionLastime
+        'DirectionLasttime': DirectionLastTime
     }
  
 
