@@ -1,0 +1,7 @@
+result-view {
+  match: SubwayResult1(this)
+   
+  message{
+    template("정방향으로 오는 시간은, #{value(this.leftDirectionArrivalTime.hour)} 시 #{value(this.leftDirectionArrivalTime.minute)} 분 입니다. 남은 시간은 #{value(this.leftDirectionLeftTime)} 입니다.")
+  }
+}

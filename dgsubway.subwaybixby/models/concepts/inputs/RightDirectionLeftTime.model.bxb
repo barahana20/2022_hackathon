@@ -1,8 +1,4 @@
-structure (RightDirectionLeftTime) {
+integer (RightDirectionLeftTime) {
   description ("오른쪽 방향 열차 도착까지 남은 시간")
-  property (time){
-    type(Time)
-    min(Optional) max(One)
-  }
   // 시간을 따로 객체(model) 로 만들어서 처리함.
 }
