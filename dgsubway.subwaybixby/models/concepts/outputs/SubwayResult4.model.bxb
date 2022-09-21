@@ -1,4 +1,4 @@
-structure (SubwayFour4) {
+structure (SubwayResult4) {
   description (~~역 ~~방향 첫차 or 막차)
   // 해당 방면 첫차 or 막차 시간 알려주기
   property (fromLeftTime) {
