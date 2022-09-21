@@ -6,7 +6,7 @@ capsule-info {
   icon-asset (/assets/path/to/icon.png)
   dispatch-name(대구지하철 1호선)
   dispatch-aliases{
-    alias (대구지하철 열차정보)
+    alias (대구지하철)
   }
   search-keywords {
     keyword (대구지하철)

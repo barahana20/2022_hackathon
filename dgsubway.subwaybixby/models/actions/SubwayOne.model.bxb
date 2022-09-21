@@ -7,6 +7,6 @@ action (SubwayOne) {
       min (Required) max (One)
     }
   }
-  type (ArchiveLookup)
+  type (Search)
   output (SubwayResult1)
 }
