@@ -29,8 +29,8 @@ def two():
 @app.route('/three')
 def three():
     subwayname = request.args.get('subwayname')
-    leftDirectionFirstTime, leftDirectionLastime = subwaymethod.return_first_last_train_time(subwayname, '상')
-    rightDirectionFirstTime, rightDirectionLastTime = subwaymethod.return_first_last_train_time(subwayname, '하')
+    leftDirectionFirstTime, leftDirectionLastime, rightDirectionFirstTime, rightDirectionLastTime = subwaymethod.return_first_last_train_time(subwayname)
+    
 
     return {
         'leftDirectionFirstTime': leftDirectionFirstTime,

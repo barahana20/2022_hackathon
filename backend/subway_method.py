@@ -99,6 +99,50 @@ class SubwayMethod:
             last_train_time = subwaytime.strftime("%H:%M:%S")
             break
         return (first_train_time, last_train_time)
+    def three(self, subwayname):
+        subway_df = ''
+        left_first_train_time = None
+        left_last_train_time = None
+        for subway in self.df:
+            if subwayname in subway.values:
+                subway_df = subway
+                break
+        weekday = self.return_week_day()
+        left_arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(상)') & (subway_df['구분'] == '도착')]
+        right_arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(하)') & (subway_df['구분'] == '도착')]
+        for i in left_arrival_time:
+            if type(left_arrival_time[i].values[0]) == str and ':' in left_arrival_time[i].values[0]:
+                subwaytime = str(left_arrival_time[i].values[0])
+            else:
+                continue
+            subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
+            left_first_train_time = subwaytime.strftime("%H:%M:%S")
+            break
+        for i in left_arrival_time.loc[:, ::-1]:
+            if type(left_arrival_time.loc[:, ::-1][i].values[0]) == str and ':' in left_arrival_time.loc[:, ::-1][i].values[0]:
+                subwaytime = str(left_arrival_time.loc[:, ::-1][i].values[0])
+            else:
+                continue
+            subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
+            left_last_train_time = subwaytime.strftime("%H:%M:%S")
+            break
+        for i in right_arrival_time:
+            if type(right_arrival_time[i].values[0]) == str and ':' in right_arrival_time[i].values[0]:
+                subwaytime = str(right_arrival_time[i].values[0])
+            else:
+                continue
+            subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
+            right_first_train_time = subwaytime.strftime("%H:%M:%S")
+            break
+        for i in right_arrival_time.loc[:, ::-1]:
+            if type(right_arrival_time.loc[:, ::-1][i].values[0]) == str and ':' in right_arrival_time.loc[:, ::-1][i].values[0]:
+                subwaytime = str(right_arrival_time.loc[:, ::-1][i].values[0])
+            else:
+                continue
+            subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
+            right_last_train_time = subwaytime.strftime("%H:%M:%S")
+            break
+        return (left_first_train_time, left_last_train_time, right_first_train_time, right_last_train_time)
     def two(self, subwayname, subwaydir):
         subwaytime1 = None
         left_time1 = None
