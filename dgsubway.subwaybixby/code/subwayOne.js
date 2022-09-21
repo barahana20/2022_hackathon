@@ -1,4 +1,4 @@
-module.exports.function = function subwayOne(subwayName){
+module.exports.function = function SubwayOne(subwayName){
 
   // for prototype
   let subwayResult = {
