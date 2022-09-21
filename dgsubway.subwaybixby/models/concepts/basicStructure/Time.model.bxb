@@ -2,10 +2,10 @@ structure (Time) {
   description (시간을 정의하는 객체입니다.)
   property (hour) {
     type (Hour)
-    min (Required) max (One)
+    min (Optional) max (One)
   }
   property (minute){
     type(Minute)
-    min(Required) max(One)
+    min(Optional) max(One)
   }
 }
