@@ -47,7 +47,7 @@ def four():
 
     return {
         'DirectionFirstTime': DirectionFirstTime,
-        'DirectionLasttime': DirectionLastTime
+        'DirectionLastTime': DirectionLastTime
     }
  
 
