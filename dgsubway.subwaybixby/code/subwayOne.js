@@ -5,9 +5,9 @@ export default function subwayOne(subwayName) {
   //   this.hour = hour;
   //   this.minute = minute;
   // }
-  const leftDirectionArrivalTime = 1210
+  const leftDirectionArrivalTime = "12:10"
   const leftDirectionLeftTime = 10
-  const rightDirectionArrivalTime = 1215
+  const rightDirectionArrivalTime = "12:15"
   const rightDirectionLeftTime = 5
   // for prototype
   // let subwayResult = {
