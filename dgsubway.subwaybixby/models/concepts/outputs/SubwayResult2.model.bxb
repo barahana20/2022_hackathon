@@ -1,4 +1,4 @@
-structure (SubwayTwo2) {
+structure (SubwayResult2) {
   description ("~~역 ~~방향(가르쳐 줘)")
   // 1개 방면 도착정보 2개씩(몇분 남았는지), with 첫차막차 시간 대답으로 띄우기
   property (toSubwayTime) {
