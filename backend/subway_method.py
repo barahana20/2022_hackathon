@@ -48,7 +48,7 @@ class SubwayMethod:
                     continue
                 upsubwaytime = datetime.strptime(upsubwaytime, "%H:%M:%S")
                 if now < upsubwaytime:
-                    up_left_time = (upsubwaytime - now).min
+                    up_left_time = (upsubwaytime - now).seconds//60
                     break
             upsubwaytime = upsubwaytime.strftime("%H:%M:%S")
         if departure_time is not None:
@@ -60,7 +60,7 @@ class SubwayMethod:
                     continue
                 downsubwaytime = datetime.strptime(downsubwaytime, "%H:%M:%S")
                 if now < downsubwaytime:
-                    down_left_time = (downsubwaytime - now).min
+                    down_left_time = (downsubwaytime - now).seconds//60
                     break
             downsubwaytime = downsubwaytime.strftime("%H:%M:%S")
 
@@ -112,7 +112,7 @@ class SubwayMethod:
                 subwaytime1 = datetime.strptime(subwaytime1, "%H:%M:%S")
                 
                 if now < subwaytime1:
-                    left_time1 = (subwaytime1 - now).min
+                    left_time1 = (subwaytime1 - now).seconds//60
                     try:
                         if type(arrival_time[str(int(i)+1)].values[0]) == str and ':' in arrival_time[str(int(i)+1)].values[0]:
                             subwaytime2 = str(arrival_time[str(int(i)+1)].values[0])
@@ -121,7 +121,7 @@ class SubwayMethod:
                     except:
                         break
                     subwaytime2 = datetime.strptime(subwaytime2, "%H:%M:%S")
-                    left_time2 = (subwaytime2 - now).min
+                    left_time2 = (subwaytime2 - now).seconds//60
                     return (subwaytime1.strftime("%H:%M:%S"), left_time1, subwaytime2.strftime("%H:%M:%S"), left_time2)
             subwaytime1 = subwaytime1.strftime("%H:%M:%S")
         return (subwaytime1, left_time1, None, None)
@@ -130,4 +130,4 @@ class SubwayMethod:
     
 if __name__ == '__main__':
     subwaymethod = SubwayMethod()
-    print(subwaymethod.two('동대구', '상'))
+    print(subwaymethod.one('동대구'))
