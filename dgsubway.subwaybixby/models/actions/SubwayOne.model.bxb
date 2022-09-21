@@ -1,5 +1,4 @@
 action (SubwayOne) {
-  type (Search)
   description ("~~역 (가르쳐 줘)!")
   // 양 방향 도착정보 1개씩(몇분 남았는지), with 첫차막차 시간 대답으로 띄우기
   collect {
@@ -8,5 +7,6 @@ action (SubwayOne) {
       min (Required) max (One)
     }
   }
+  type (Search)
   output (SubwayResult1)
 }

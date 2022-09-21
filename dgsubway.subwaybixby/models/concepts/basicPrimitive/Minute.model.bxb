@@ -1,3 +1,0 @@
-integer (Minute) {
-  description ("몇 '분'을 정의하는 integer")
-}
