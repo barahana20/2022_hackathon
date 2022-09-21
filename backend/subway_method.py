@@ -48,7 +48,7 @@ class SubwayMethod:
                     continue
                 upsubwaytime = datetime.strptime(upsubwaytime, "%H:%M:%S")
                 if now < upsubwaytime:
-                    up_left_time = upsubwaytime.minute - now.minute
+                    up_left_time = (upsubwaytime - now).min
                     break
             upsubwaytime = upsubwaytime.strftime("%H:%M:%S")
         if departure_time is not None:
@@ -60,7 +60,7 @@ class SubwayMethod:
                     continue
                 downsubwaytime = datetime.strptime(downsubwaytime, "%H:%M:%S")
                 if now < downsubwaytime:
-                    down_left_time = downsubwaytime.minute - now.minute
+                    down_left_time = (downsubwaytime - now).min
                     break
             downsubwaytime = downsubwaytime.strftime("%H:%M:%S")
 
@@ -112,7 +112,7 @@ class SubwayMethod:
                 subwaytime1 = datetime.strptime(subwaytime1, "%H:%M:%S")
                 
                 if now < subwaytime1:
-                    left_time1 = subwaytime1.minute - now.minute
+                    left_time1 = (subwaytime1 - now).min
                     try:
                         if type(arrival_time[str(int(i)+1)].values[0]) == str and ':' in arrival_time[str(int(i)+1)].values[0]:
                             subwaytime2 = str(arrival_time[str(int(i)+1)].values[0])
@@ -121,7 +121,7 @@ class SubwayMethod:
                     except:
                         break
                     subwaytime2 = datetime.strptime(subwaytime2, "%H:%M:%S")
-                    left_time2 = subwaytime2.minute - now.minute
+                    left_time2 = (subwaytime2 - now).min
                     return (subwaytime1.strftime("%H:%M:%S"), left_time1, subwaytime2.strftime("%H:%M:%S"), left_time2)
             subwaytime1 = subwaytime1.strftime("%H:%M:%S")
         return (subwaytime1, left_time1, None, None)
