@@ -1,9 +1,9 @@
 enum (SubwayDir) {
   description (방면 역 이름)
-  symbol (설화명곡역)
-  symbol (안심역)
-  symbol (영남대역)
-  symbol (문양역)
-  symbol (칠곡경대병원역)
-  symbol (용지역)
+  symbol (설화명곡)
+  symbol (안심)
+  symbol (영남대)
+  symbol (문양)
+  symbol (칠곡경대병원)
+  symbol (용지)
 }
