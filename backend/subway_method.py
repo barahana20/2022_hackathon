@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*- 
 import numpy as np
 import pandas as pd
 from datetime import datetime
@@ -5,7 +6,7 @@ from datetime import datetime
 class SubwayMethod:
     def __init__(self):
         self.df = [pd.read_csv('대구도시철도공사_1호선 열차시각표_20220430.csv'), pd.read_csv('대구도시철도공사_2호선 열차시각표_20220430.csv'), pd.read_csv('대구도시철도공사_3호선 열차시각표_20220430.csv')]
-        pass
+        self.line = [['안심', '각산', '반야월', '신기', '율하', '용계', '방촌', '해안', '동촌', '아양교', '동구청', '동대구', '신천', '칠성시장', '대구역', '중앙로', '반월당', '명덕', '교대', '영대병원', '현충로', '안지랑', '대명', '서부정류장', '송현', '월촌', '상인', '월배', '진천', '대곡', '화원', '설화명곡'], ['영남대', '임당', '정평', '사월', '신매', '고산', '대공원', '연호', '담티', '만촌', '수성구청', '범어', '대구은행', '경대병원', '반월당', '청라언덕', '반고개', '내당', '두류', '감삼', '죽전', '용산', '이곡', '성서산단', '계명대', '강창', '대실', '다사', '문양'], ['용지', '범물', '지산', '수성못', '황금', '어린이회관', '수성구민운동장', '수성시장', '대봉교', '건들바위', '명덕', '남산', '청라언덕', '서문시장', '달성공원', '북구청', '원대', '팔달시장', '만평', '공단', '팔달', '매천시장', '매천', '태전', '구암', '칠곡운암', '동천', '팔거', '학정', '칠곡경대병원']]
     def return_week_day(self):
         now = datetime.strptime(datetime.now().strftime('%H:%M:%S'), "%H:%M:%S")
         weekday = now.weekday()
@@ -21,22 +22,23 @@ class SubwayMethod:
         upsubwaytime = None
         down_left_time = None
         up_left_time = None
-        self.subway_df = ''
+        subway_df = ''
         for subway in self.df:
             if subwayname in subway.values:
-                self.subway_df = subway
+                subway_df = subway
                 break
         now = datetime.strptime(datetime.now().strftime('%H:%M:%S'), "%H:%M:%S")
         weekday = self.return_week_day()
-        arrival_time = self.subway_df.loc[(self.subway_df['역명'] == subwayname) & (self.subway_df['요일별'] == f'{weekday}(상)') & (self.subway_df['구분'] == '도착')]
+       
+        arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(상)') & (subway_df['구분'] == '도착')]
         if arrival_time.empty:
-            arrival_time = self.subway_df.loc[(self.subway_df['역명'] == subwayname) & (self.subway_df['요일별'] == f'{weekday}(하)') & (self.subway_df['구분'] == '출발')]
+            arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(하)') & (subway_df['구분'] == '출발')]
             if arrival_time.empty:
                 arrival_time = None
             
-        departure_time = self.subway_df.loc[(self.subway_df['역명'] == subwayname) & (self.subway_df['요일별'] == f'{weekday}(하)') & (self.subway_df['구분'] == '도착')]
+        departure_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(하)') & (subway_df['구분'] == '도착')]
         if departure_time.empty:
-            departure_time = self.subway_df.loc[(self.subway_df['역명'] == subwayname) & (self.subway_df['요일별'] == f'{weekday}(상)') & (self.subway_df['구분'] == '출발')]
+            departure_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(상)') & (subway_df['구분'] == '출발')]
             if departure_time.empty:
                 departure_time = None
         if arrival_time is not None:
@@ -66,15 +68,20 @@ class SubwayMethod:
 
         return (upsubwaytime, up_left_time, downsubwaytime, down_left_time)
     def return_first_last_train_time(self, subwayname, subwaydir):
-        self.subway_df = ''
+        subway_df = ''
         first_train_time = None
         last_train_time = None
-        for subway in self.df:
+        for idx, subway in enumerate(self.df):
             if subwayname in subway.values:
-                self.subway_df = subway
+                subway_df = subway
+                subway_index = idx
                 break
         weekday = self.return_week_day()
-        arrival_time = self.subway_df.loc[(self.subway_df['역명'] == subwayname) & (self.subway_df['요일별'] == f'{weekday}({subwaydir})') & (self.subway_df['구분'] == '도착')]
+        line = self.line[subway_index]
+        if line.index(subwayname) < line.index(subwaydir):
+            arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(상)') & (subway_df['구분'] == '도착')]
+        else:
+            arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(하)') & (subway_df['구분'] == '도착')]
         for i in arrival_time:
             if type(arrival_time[i].values[0]) == str and ':' in arrival_time[i].values[0]:
                 subwaytime = str(arrival_time[i].values[0])
@@ -95,14 +102,19 @@ class SubwayMethod:
     def two(self, subwayname, subwaydir):
         subwaytime1 = None
         left_time1 = None
-        self.subway_df = ''
-        for subway in self.df:
+        subway_df = ''
+        for idx, subway in enumerate(self.df):
             if subwayname in subway.values:
-                self.subway_df = subway
+                subway_df = subway
+                subway_index = idx
                 break
         now = datetime.strptime(datetime.now().strftime('%H:%M:%S'), "%H:%M:%S")
         weekday = self.return_week_day()
-        arrival_time = self.subway_df.loc[(self.subway_df['역명'] == subwayname) & (self.subway_df['요일별'] == f'{weekday}({subwaydir})') & (self.subway_df['구분'] == '도착')]
+        line = self.line[subway_index]
+        if line.index(subwayname) < line.index(subwaydir):
+            arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(상)') & (subway_df['구분'] == '도착')]
+        else:
+            arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(하)') & (subway_df['구분'] == '도착')]
         if not arrival_time.empty:
             for i in arrival_time:
                 if type(arrival_time[i].values[0]) == str and ':' in arrival_time[i].values[0]:
@@ -130,4 +142,4 @@ class SubwayMethod:
     
 if __name__ == '__main__':
     subwaymethod = SubwayMethod()
-    print(subwaymethod.one('동대구'))
+    print(subwaymethod.one('영남대'))
