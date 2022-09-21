@@ -1,0 +1,4 @@
+Time (RightDirectionArrivalTime) {
+  description ("오른쪽 방향 열차도착시간")
+  // 시간을 따로 객체(model) 로 만들어서 처리함.
+}

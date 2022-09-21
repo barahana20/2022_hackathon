@@ -8,5 +8,5 @@ action (SubwayOne) {
     }
   }
   type (Search)
-  output (SubwayOne1)
+  output (SubwayResult1)
 }

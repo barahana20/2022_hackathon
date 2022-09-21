@@ -1,20 +1,20 @@
 structure (SubwayOne1) {
   description ("~~역 (가르쳐 줘)!")
   // 양 방향 도착정보 1개씩(몇분 남았는지), with 첫차막차 시간 대답으로 띄우기
-  property (toSubwayTime) {
-    type (ToSubwayTime)
+  property (leftDirectionArrivalTime) {
+    type (LeftDirectionArrivalTime)
     min (Required) max (One)
   }
-  property (toLeftTime) {
-    type (ToLeftTime)
+  property (leftDirectionLeftTime) {
+    type (LeftDirectionLeftTime)
     min (Optional) max (One)
   }
-  property (fromSubwayTime) {
-    type (FromSubwayTime)
+  property (rightDirectionArrivalTime) {
+    type (RightDirectionArrivalTime)
     min (Required) max (One)
   }
-  property (fromLeftTime) {
-    type (FromLeftTime)
+  property (rightDirectionLeftTime) {
+    type (RightDirectionLeftTime)
     min (Optional) max (One)
   }
 }
