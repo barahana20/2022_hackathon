@@ -3,5 +3,5 @@ result-view {
   
   message{
     template("설화명곡 방면으로 가는 열차는, #{value(this.firstLeftTime)}분 뒤에 도착합니다.")
-  }
+  }  
 }

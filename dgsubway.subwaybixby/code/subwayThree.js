@@ -5,19 +5,19 @@ export default function subwayThree(subwayName) {
   console.log('http://18.190.78.1:5001/three?subwayname='+subwayName['subwayName'])
   var response = http.getUrl('http://18.190.78.1:5001/three?subwayname='+subwayName['subwayName'], { format: 'json' });
   console.log(response);
-  const leftDirectionArrivalTime = response['leftDirectionFirstTime'];
-  const leftDirectionLeftTime = response['leftDirectionLastime'];
-  const rightDirectionArrivalTime = response['rightDirectionFirstTime'];
-  const rightDirectionLeftTime = response['rightDirectionLastTime'];
-  console.log(leftDirectionArrivalTime)
-  console.log(leftDirectionLeftTime)
-  console.log(rightDirectionArrivalTime)
-  console.log(rightDirectionLeftTime)
+  const leftFirstTime = response['leftFirstTime'];
+  const leftLastTime = response['leftLastTime'];
+  const rightFirstTime = response['rightFirstTime'];
+  const rightLastTime = response['rightLastTime'];
+  console.log(leftFirstTime)
+  console.log(leftLastTime)
+  console.log(rightFirstTime)
+  console.log(rightLastTime)
   
   return {
-    leftFirstTime: leftDirectionArrivalTime,
-    leftLastTime: leftDirectionLeftTime,
-    rightFirstTime: rightDirectionArrivalTime,
-    rightLastTime: rightDirectionLeftTime
+    leftFirstTime: leftFirstTime,
+    leftLastTime: leftLastTime,
+    rightFirstTime: rightFirstTime,
+    rightLastTime: rightLastTime
   }
 }

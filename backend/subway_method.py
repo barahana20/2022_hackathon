@@ -2,7 +2,14 @@
 import numpy as np
 import pandas as pd
 from datetime import datetime
-
+# LeftDirectionArrivalTime: 왼쪽 방향 열차도착시간
+# LeftDirectionLeftTime: 왼쪽방향 열차도착까지 남은 시간
+# RightDirectionArrivalTime: 오른쪽 방향 열차도착시간
+# RightDirectionLeftTime: 오른쪽 방향 열차도착까지 남은 시간
+# RightFirstTime: 오른쪽 방향 열차 첫 차 시간
+# LeftFirstTime: 왼쪽 방향 열차 첫 차 시간
+# RightLastTime: 오른쪽 방향 열차 마지막 차 시간
+# LeftLastTime: 왼쪽 방향 열차 마지막 차 시간
 class SubwayMethod:
     def __init__(self):
         self.df = [pd.read_csv('대구도시철도공사_1호선 열차시각표_20220430.csv'), pd.read_csv('대구도시철도공사_2호선 열차시각표_20220430.csv'), pd.read_csv('대구도시철도공사_3호선 열차시각표_20220430.csv')]
@@ -99,6 +106,44 @@ class SubwayMethod:
             last_train_time = subwaytime.strftime("%H:%M:%S")
             break
         return (first_train_time, last_train_time)
+    def two(self, subwayname, subwaydir):
+        subwaytime1 = None
+        left_time1 = None
+        subway_df = ''
+        for idx, subway in enumerate(self.df):
+            if subwayname in subway.values:
+                subway_df = subway
+                subway_index = idx
+                break
+        now = datetime.strptime(datetime.now().strftime('%H:%M:%S'), "%H:%M:%S")
+        weekday = self.return_week_day()
+        line = self.line[subway_index]
+        if line.index(subwayname) < line.index(subwaydir):
+            arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(상)') & (subway_df['구분'] == '도착')]
+        else:
+            arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(하)') & (subway_df['구분'] == '도착')]
+        if not arrival_time.empty:
+            for i in arrival_time:
+                if type(arrival_time[i].values[0]) == str and ':' in arrival_time[i].values[0]:
+                    subwaytime1 = str(arrival_time[i].values[0])
+                else:
+                    continue
+                subwaytime1 = datetime.strptime(subwaytime1, "%H:%M:%S")
+                
+                if now < subwaytime1:
+                    left_time1 = (subwaytime1 - now).seconds//60
+                    try:
+                        if type(arrival_time[str(int(i)+1)].values[0]) == str and ':' in arrival_time[str(int(i)+1)].values[0]:
+                            subwaytime2 = str(arrival_time[str(int(i)+1)].values[0])
+                        else:
+                            continue
+                    except:
+                        break
+                    subwaytime2 = datetime.strptime(subwaytime2, "%H:%M:%S")
+                    left_time2 = (subwaytime2 - now).seconds//60
+                    return (subwaytime1.strftime("%H:%M:%S"), left_time1, subwaytime2.strftime("%H:%M:%S"), left_time2)
+            subwaytime1 = subwaytime1.strftime("%H:%M:%S")
+        return (subwaytime1, left_time1, None, None)
     def three(self, subwayname):
         subway_df = ''
         left_first_train_time = None
@@ -145,44 +190,7 @@ class SubwayMethod:
                 right_last_train_time = subwaytime.strftime("%H:%M:%S")
                 break
         return (left_first_train_time, left_last_train_time, right_first_train_time, right_last_train_time)
-    def two(self, subwayname, subwaydir):
-        subwaytime1 = None
-        left_time1 = None
-        subway_df = ''
-        for idx, subway in enumerate(self.df):
-            if subwayname in subway.values:
-                subway_df = subway
-                subway_index = idx
-                break
-        now = datetime.strptime(datetime.now().strftime('%H:%M:%S'), "%H:%M:%S")
-        weekday = self.return_week_day()
-        line = self.line[subway_index]
-        if line.index(subwayname) < line.index(subwaydir):
-            arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(상)') & (subway_df['구분'] == '도착')]
-        else:
-            arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(하)') & (subway_df['구분'] == '도착')]
-        if not arrival_time.empty:
-            for i in arrival_time:
-                if type(arrival_time[i].values[0]) == str and ':' in arrival_time[i].values[0]:
-                    subwaytime1 = str(arrival_time[i].values[0])
-                else:
-                    continue
-                subwaytime1 = datetime.strptime(subwaytime1, "%H:%M:%S")
-                
-                if now < subwaytime1:
-                    left_time1 = (subwaytime1 - now).seconds//60
-                    try:
-                        if type(arrival_time[str(int(i)+1)].values[0]) == str and ':' in arrival_time[str(int(i)+1)].values[0]:
-                            subwaytime2 = str(arrival_time[str(int(i)+1)].values[0])
-                        else:
-                            continue
-                    except:
-                        break
-                    subwaytime2 = datetime.strptime(subwaytime2, "%H:%M:%S")
-                    left_time2 = (subwaytime2 - now).seconds//60
-                    return (subwaytime1.strftime("%H:%M:%S"), left_time1, subwaytime2.strftime("%H:%M:%S"), left_time2)
-            subwaytime1 = subwaytime1.strftime("%H:%M:%S")
-        return (subwaytime1, left_time1, None, None)
+    
         
         
     
