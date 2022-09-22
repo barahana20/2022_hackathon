@@ -9,10 +9,10 @@ export default function subwayThree(subwayName) {
   const leftLastTime = response['leftLastTime'];
   const rightFirstTime = response['rightFirstTime'];
   const rightLastTime = response['rightLastTime'];
-  console.log(leftDirectionArrivalTime)
-  console.log(leftDirectionLeftTime)
-  console.log(rightDirectionArrivalTime)
-  console.log(rightDirectionLeftTime)
+  console.log(leftFirstTime)
+  console.log(leftLastTime)
+  console.log(rightFirstTime)
+  console.log(rightLastTime)
   
   return {
     leftFirstTime: leftFirstTime,

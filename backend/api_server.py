@@ -50,8 +50,6 @@ def four():
         'directionLastTime': directionLastTime
     }
  
-
- 
 @app.route('/about')
 def about():
     return 'About 페이지'
