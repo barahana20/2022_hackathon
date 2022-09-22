@@ -17,8 +17,12 @@ structure (SubwayResult2) {
     type (RightDirectionLeftTime)
     min (Optional) max (One)
   }
+  property (subwayLine){
+    type(SubwayLine)
+    min (Required) max (One)
+  }
   property (subwayDir){
     type(SubwayDir)
-    min(Optional) max (One)
+    min(Required) max (One)
   }
 }
