@@ -14,6 +14,7 @@ export default function subwayOne(subwayName,subwayDir){
     firstArrivalTime : firstArrivalTime,
     firstLeftTime : firstLeftTime,
     secondArrivalTime : secondArrivalTime,
-    secondLeftTime : secondLeftTime
+    secondLeftTime : secondLeftTime,
+    subwayLine : 1
   }
 }

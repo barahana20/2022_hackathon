@@ -1,0 +1,18 @@
+macro-def(SubwayTitle) {
+  params {
+    param(stationText){
+      type (StationText)
+      min(Required)
+      max(One)
+    }
+  }
+
+  content{
+    single-line{
+      text{
+        style(Title_M)
+        value("#{value(stationText)}방면 열차 시간")
+      }
+    } 
+  }  
+}

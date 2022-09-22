@@ -2,6 +2,12 @@ result-view {
   match: SubwayResult2(this)
   
   message{
-    template("곧 오는 열차의 시간은, #{value(this.firstArrivalTime)}입니다.")
+    if(this.subwayLine == 1){
+      template("안심 방면으로 가는 열차는, #{value(this.firstLeftTime)}분 뒤에 도착합니다.")
+    }else-if(this.subwayLine == 2){
+      template("영남대 방면으로 가는 열차는, #{value(this.firstLeftTime)}에 도착합니다.") 
+    }else{
+      template("칠곡경대병원 방면으로 가는 열차는, #{value(this.firstLeftTime)}에 도착합니다.")
+    }
   }
 }

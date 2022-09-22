@@ -3,21 +3,75 @@ result-view {
    
   message{
     if(this.subwayLine == 1){
-      template("안심 방면으로 가는 열차는, #{value(this.leftDirectionLeftTime)}뒤에 도착합니다./n 안심 방면으로 가는 시간은 #{value(this.rightDirectionLeftTime)} 뒤에 도착합니다.")
+      template("안심 방면으로 가는 열차는, #{value(this.leftDirectionLeftTime)}분 뒤에 도착합니다. 설화명곡 방면으로 가는 열차는 #{value(this.rightDirectionLeftTime)}분 뒤에 도착합니다.")
     }else-if(this.subwayLine == 2){
-      template("영남대 방면으로 가는 시간은, #{value(this.leftDirectionArrivalTime)}에 도착합니다. 남은 시간은 #{value(this.leftDirectionLeftTime)} 분 입니다.") 
+      template("영남대 방면으로 가는 열차는, #{value(this.leftDirectionArrivalTime)}에 도착합니다. 문양 방면으로 가는 열차는 #{value(this.rightDirectionLeftTime)}분 뒤에 도착합니다.") 
     }else{
-      template("칠곡경대병원 방면으로 가는 시간은, #{value(this.leftDirectionArrivalTime)}에 도착합니다. 남은 시간은 #{value(this.leftDirectionLeftTime)} 분 입니다.")
+      template("칠곡경대병원 방면으로 가는 열차는, #{value(this.leftDirectionArrivalTime)}에 도착합니다. 용지 방면으로 가는 열차는 #{value(this.rightDirectionLeftTime)}분 뒤에 도착합니다.")
     }
   }
   render{
     layout{
-      
-      // macro (subwayLine){
-      //   param(subwayResult){
-      //     expression (subwayResult1)
-      //   }
-      // }
+      section{
+        content{
+          if(this.subwayLine == 1){
+            single-line{
+            text{
+              style(Title_M)
+              value("설화명곡방면 열차 시간")
+              }
+            } 
+          }else-if (this.subwayLine == 2){
+            single-line{
+            text{
+              style(Title_M)
+              value("영남대방면 열차 시간")
+              }
+            }
+          }else{
+            single-line{
+            text{
+              style(Title_M)
+              value("칠곡경대병원방면 열차 시간")
+              }
+            }
+          }  
+          single-line{
+            text{
+              style(Detail_L)
+              value("#{value(this.leftDirectionArrivalTime)}")
+            }
+          }
+          if(this.subwayLine == 1){
+            single-line{
+            text{
+              style(Title_M)
+              value("안심 방면 열차 시간")
+            }
+          }
+          }else-if (this.subwayLine == 2){
+            single-line{
+            text{
+              style(Title_M)
+              value("문양 방면 열차 시간")
+            }
+          }
+          }else{
+            single-line{
+            text{
+              style(Title_M)
+              value("용지 방면 열차 시간")
+            }
+          }
+          }
+          single-line{
+            text{
+              style(Detail_L)
+              value("#{value(this.rightDirectionArrivalTime)}")
+            }
+          }
+        }
+      }
     }
   }
 }
