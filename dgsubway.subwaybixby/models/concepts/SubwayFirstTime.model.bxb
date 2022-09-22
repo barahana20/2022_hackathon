@@ -2,6 +2,6 @@ structure (SubwayFirstTime) {
   description (첫 차 시간)
     property (time){
     type(Time)
-    min(Optional) max(One)
+    min(Required) max(One)
   }
 }

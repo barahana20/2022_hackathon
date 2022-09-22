@@ -8,5 +8,9 @@ endpoints {
       accepted-inputs (subwayName, subwayDir)
       local-endpoint (subwayTwo.js)
     }
+    action-endpoint (SubwayThree){
+      accepted-inputs (subwayName,subwayFirstTime)
+      local-endpoint (subwayThree.js)
+    }
   }
 }

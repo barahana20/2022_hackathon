@@ -4,7 +4,12 @@ action (SubwayThree) {
   collect {
     input (subwayName) {
       type (SubwayName)
-      min (Optional) max (One)
+      min (Required) max (One)
+    }
+
+    input(subwayFirstTime){
+      type(SubwayFirstTime)
+      min(Required) max(One)
     }
   }
   type (Search)
