@@ -3,11 +3,11 @@ structure (SubwayResult2) {
   // 1개 방면 도착정보 2개씩(몇분 남았는지), with 첫차막차 시간 대답으로 띄우기
   property (firstArrivalTime) {
     type (LeftDirectionArrivalTime)
-    min (Required) max (One)
+    min (Optional) max (One)
   }
   property (firstLeftTime) {
     type (LeftDirectionLeftTime)
-    min (Required) max (One)
+    min (Optional) max (One)
   }
   property (secondArrivalTime) {
     type (RightDirectionArrivalTime)
@@ -23,6 +23,6 @@ structure (SubwayResult2) {
   }
   property (subwayDir){
     type(SubwayDir)
-    min(Required) max (One)
+    min(Optional) max (One)
   }
 }

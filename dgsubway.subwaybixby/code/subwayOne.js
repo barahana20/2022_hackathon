@@ -14,6 +14,7 @@ export default function subwayOne(subwayName) {
     leftDirectionArrivalTime: leftDirectionArrivalTime,
     leftDirectionLeftTime: leftDirectionLeftTime,
     rightDirectionArrivalTime: rightDirectionArrivalTime,
-    rightDirectionLeftTime: rightDirectionLeftTime
+    rightDirectionLeftTime: rightDirectionLeftTime,
+    subwayLine : 1 // for test. Implementation Required 
   }
 }
