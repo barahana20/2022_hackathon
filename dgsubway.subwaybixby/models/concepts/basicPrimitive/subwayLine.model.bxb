@@ -1,0 +1,3 @@
+integer (SubwayLine){
+  description ("몇호선인지 체크해주는 부분입니다.")
+}
