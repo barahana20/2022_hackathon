@@ -1,4 +1,4 @@
 train (t-6h7n0yvj6ys2dpsueh7b85hb1) {
-  utterance ("[g:SubwayOne] (상인역)[v:SubwayName:상인] 열차 언제 와?")
-  last-modified (1663806930102)
+  utterance ("[g:SubwayOne] (상인역)[v:SubwayName:상인역] 열차 언제 와?")
+  last-modified (1663765251245)
 }

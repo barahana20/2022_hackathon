@@ -11,6 +11,10 @@ action (SubwayFour) {
       type (SubwayDir)
       min (Required) max (One)
     }
+    input(isFirstOrLast){
+      type(IsFirstOrLast)
+      min(Required) max (One)
+    }
   }
   type (Search)
   output (SubwayResult4)
