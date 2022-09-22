@@ -18,36 +18,36 @@ def one():
 def two():
     subwayname = request.args.get('subwayname')
     subwaydir = request.args.get('subwaydir')
-    leftDirectionArrivalTime, leftDirectionLeftTime, rightDirectionArrivalTime, rightDirectionLeftTime = subwaymethod.two(subwayname, subwaydir)
+    firstArrivalTime, firstLeftTime, secondArrivalTime, secondLeftTime = subwaymethod.two(subwayname, subwaydir)
     return {
-        'leftDirectionArrivalTime': leftDirectionArrivalTime,
-        'leftDirectionLeftTime': leftDirectionLeftTime,
-        'rightDirectionArrivalTime': rightDirectionArrivalTime,
-        'rightDirectionLeftTime': rightDirectionLeftTime
+        'firstArrivalTime': firstArrivalTime,
+        'firstLeftTime': firstLeftTime,
+        'secondArrivalTime': secondArrivalTime,
+        'secondLeftTime': secondLeftTime
     }
  
 @app.route('/three')
 def three():
     subwayname = request.args.get('subwayname')
-    leftDirectionFirstTime, leftDirectionLastime, rightDirectionFirstTime, rightDirectionLastTime = subwaymethod.three(subwayname)
+    leftFirstTime, leftLastTime, rightFirstTime, rightLastTime = subwaymethod.three(subwayname)
     
 
     return {
-        'leftDirectionFirstTime': leftDirectionFirstTime,
-        'leftDirectionLastime': leftDirectionLastime,
-        'rightDirectionFirstTime': rightDirectionFirstTime,
-        'rightDirectionLastTime': rightDirectionLastTime
+        'leftFirstTime': leftFirstTime,
+        'leftLastTime': leftLastTime,
+        'rightFirstTime': rightFirstTime,
+        'rightLastTime': rightLastTime
     }
   
 @app.route('/four')
 def four():
     subwayname = request.args.get('subwayname')
     subwaydir = request.args.get('subwaydir')
-    DirectionFirstTime, DirectionLastTime = subwaymethod.return_first_last_train_time(subwayname, subwaydir)
+    directionFirstTime, directionLastTime = subwaymethod.return_first_last_train_time(subwayname, subwaydir)
 
     return {
-        'DirectionFirstTime': DirectionFirstTime,
-        'DirectionLastTime': DirectionLastTime
+        'directionFirstTime': directionFirstTime,
+        'directionLastTime': directionLastTime
     }
  
 

@@ -9,11 +9,10 @@ export default function subwayOne(subwayName) {
   const rightDirectionArrivalTime = response['rightDirectionArrivalTime'];
   const rightDirectionLeftTime = response['rightDirectionLeftTime'];
 
-   return {
+  return {
     leftDirectionArrivalTime: leftDirectionArrivalTime,
     leftDirectionLeftTime: leftDirectionLeftTime,
     rightDirectionArrivalTime: rightDirectionArrivalTime,
-    rightDirectionLeftTime: rightDirectionLeftTime,
-    subwayLine : 1
+    rightDirectionLeftTime: rightDirectionLeftTime
   }
 }
