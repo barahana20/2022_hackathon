@@ -1,8 +1,8 @@
 train (t-yn1o1rehf5hdx9a7e3ntndzk7) {
   utterance ("[g:SubwayTwo] (상인역)[v:SubwayName:상인] (설화명곡행)[v:SubwayDir:설화명곡] 열차 언제 와?")
-  last-modified (1663782261872)
+  last-modified (1663848411406)
 }
 train (t-ydac4ti2sephsr4al6rq08gz6) {
-  utterance ("[g:SubwayFour] (대구역)[v:SubwayName:대구역] (설화명곡행)[v:SubwayDir:설화명곡] 첫 차")
-  last-modified (1663783013827)
+  utterance ("[g:SubwayFour] (대구역)[v:SubwayName:대구역] (설화명곡행)[v:SubwayDir:설화명곡] (첫 차)[v:IsFirstOrLast:첫차]")
+  last-modified (1663848862175)
 }
