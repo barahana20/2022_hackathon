@@ -1,7 +1,7 @@
 result-view {
   match: SubwayResult2(this)
-   
+  
   message{
-    template("곧 오는 열차의 시간은, #{value(this.firstArrivalTime.hour)}시 #{value(this.firstArrivalTime.minute)}분 입니다. 22")
+    template("곧 오는 열차의 시간은, #{value(this.firstArrivalTime)}입니다.")
   }
 }

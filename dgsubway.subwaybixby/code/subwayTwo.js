@@ -1,14 +1,14 @@
+import console from 'console';
+import http from 'http';
 export default function subwayOne(subwayName,subwayDir){
-
-  function Time (hour,minute) {
-    this.hour = hour;
-    this.minute = minute;
-  }
-
-  const firstArrivalTime = new Time(12,10);
-  const firstLeftTime = 10;
-  const secondArrivalTime = new Time(12,22);
-  const secondLeftTime = 22;
+  
+  console.log('http://18.190.78.1:5001/two?subwayname='+subwayName['subwayName']+'&subwaydir='+subwayName['subwayDir']);
+  var response = http.getUrl('http://18.190.78.1:5001/two?subwayname='+subwayName['subwayName']+'&subwaydir='+subwayName['subwayDir'], { format: 'json' });
+  console.log(response);
+  const firstArrivalTime = response['leftDirectionArrivalTime'];
+  const firstLeftTime = response['leftDirectionLeftTime'];
+  const secondArrivalTime = response['rightDirectionArrivalTime'];
+  const secondLeftTime = response['rightDirectionLeftTime'];
 
   return {
     firstArrivalTime : firstArrivalTime,

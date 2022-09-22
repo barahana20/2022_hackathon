@@ -1,0 +1,7 @@
+result-view {
+  match: SubwayResult4(this)
+   
+  message{
+    template("첫차의 시간은, #{value(this.directionFirstTime)} 입니다. 막차의 시간은 #{value(this.directionLastTime)} 입니다.")
+  }
+}

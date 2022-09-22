@@ -6,11 +6,6 @@ action (SubwayThree) {
       type (SubwayName)
       min (Required) max (One)
     }
-
-    input(subwayFirstTime){
-      type(SubwayFirstTime)
-      min(Required) max(One)
-    }
   }
   type (Search)
   output (SubwayResult3)

@@ -1,7 +1,3 @@
-structure (SubwayFirstTime) {
+text (SubwayFirstTime) {
   description (첫 차 시간)
-    property (time){
-    type(Time)
-    min(Required) max(One)
-  }
 }

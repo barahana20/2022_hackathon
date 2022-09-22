@@ -1,4 +1,4 @@
 train (t-nlout595mwz2tioejhpwuqi0u) {
-  utterance ("[g:SubwayTwo] (대구역)[v:SubwayName:대구역] (안심행)[v:SubwayDir:안심역] 열차 언제 와?")
-  last-modified (1663758034525)
+  utterance ("[g:SubwayTwo] (대구역)[v:SubwayName:대구역] (안심행)[v:SubwayDir:안심] 열차 언제 와?")
+  last-modified (1663782238450)
 }
