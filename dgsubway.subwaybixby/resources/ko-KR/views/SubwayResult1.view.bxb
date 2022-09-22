@@ -3,11 +3,21 @@ result-view {
    
   message{
     if(this.subwayLine == 1){
-      template("안심 방면으로 가는 열차는, #{value(this.leftDirectionArrivalTime)}에 도착합니다. 남은 시간은 #{value(this.leftDirectionLeftTime)} 분 입니다.")
-    }else if(this.subwayLine == 2){
+      template("안심 방면으로 가는 열차는, #{value(this.leftDirectionLeftTime)}뒤에 도착합니다./n 안심 방면으로 가는 시간은 #{value(this.rightDirectionLeftTime)} 뒤에 도착합니다.")
+    }else-if(this.subwayLine == 2){
       template("영남대 방면으로 가는 시간은, #{value(this.leftDirectionArrivalTime)}에 도착합니다. 남은 시간은 #{value(this.leftDirectionLeftTime)} 분 입니다.") 
     }else{
       template("칠곡경대병원 방면으로 가는 시간은, #{value(this.leftDirectionArrivalTime)}에 도착합니다. 남은 시간은 #{value(this.leftDirectionLeftTime)} 분 입니다.")
+    }
+  }
+  render{
+    layout{
+      
+      // macro (subwayLine){
+      //   param(subwayResult){
+      //     expression (subwayResult1)
+      //   }
+      // }
     }
   }
 }
