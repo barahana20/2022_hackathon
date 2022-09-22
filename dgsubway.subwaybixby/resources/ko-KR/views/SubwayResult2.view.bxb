@@ -2,6 +2,6 @@ result-view {
   match: SubwayResult2(this)
   
   message{
-    template("#{value(this.)} 방면으로 가는 열차는, #{value(this.firstLeftTime)}분 뒤에 도착합니다.")
+    template("#{value(this.subwayDir)} 방면으로 가는 열차는, #{value(this.firstLeftTime)}분 뒤에 도착합니다.")
   }
 }
