@@ -188,30 +188,30 @@ class SubwayMethod:
             arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(하)') & (subway_df['구분'] == '도착')]
             if arrival_time.empty:
                 arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(하)') & (subway_df['구분'] == '출발')]
-        
-        for i in arrival_time:
-            if type(arrival_time[i].values[0]) == str and ':' in arrival_time[i].values[0]:
-                subwaytime = str(arrival_time[i].values[0])
-            else:
-                continue
-            subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
-            firstTrainTime = subwaytime.strftime("%H:%M:%S")
-            break
-        for i in arrival_time.loc[:, ::-1]:
-            if type(arrival_time.loc[:, ::-1][i].values[0]) == str and ':' in arrival_time.loc[:, ::-1][i].values[0]:
-                subwaytime = str(arrival_time.loc[:, ::-1][i].values[0])
-            else:
-                continue
-            subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
-            lastTrainTime = subwaytime.strftime("%H:%M:%S")
-            try:
-                if type(arrival_time.loc[:, ::-1][str(int(i)-2)].values[0]) == str and ':' in arrival_time.loc[:, ::-1][str(int(i)-2)].values[0]:
-                    beforeLastTrainTime = str(arrival_time.loc[:, ::-1][str(int(i)-2)].values[0])
+        if not arrival_time.empty:
+            for i in arrival_time:
+                if type(arrival_time[i].values[0]) == str and ':' in arrival_time[i].values[0]:
+                    subwaytime = str(arrival_time[i].values[0])
                 else:
-                    break
-            except:
+                    continue
+                subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
+                firstTrainTime = subwaytime.strftime("%H:%M:%S")
                 break
-            break
+            for i in arrival_time.loc[:, ::-1]:
+                if type(arrival_time.loc[:, ::-1][i].values[0]) == str and ':' in arrival_time.loc[:, ::-1][i].values[0]:
+                    subwaytime = str(arrival_time.loc[:, ::-1][i].values[0])
+                else:
+                    continue
+                subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
+                lastTrainTime = subwaytime.strftime("%H:%M:%S")
+                try:
+                    if type(arrival_time.loc[:, ::-1][str(int(i)-2)].values[0]) == str and ':' in arrival_time.loc[:, ::-1][str(int(i)-2)].values[0]:
+                        beforeLastTrainTime = str(arrival_time.loc[:, ::-1][str(int(i)-2)].values[0])
+                    else:
+                        break
+                except:
+                    break
+                break
         return (firstTrainTime, lastTrainTime, beforeLastTrainTime, subwayLine)
         
     
