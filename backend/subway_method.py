@@ -101,8 +101,8 @@ class SubwayMethod:
                 if now < subwaytime1:
                     left_time1 = (subwaytime1 - now).seconds//60
                     try:
-                        if type(arrival_time[str(int(i)+1)].values[0]) == str and ':' in arrival_time[str(int(i)+1)].values[0]:
-                            subwaytime2 = str(arrival_time[str(int(i)+1)].values[0])
+                        if type(arrival_time[str(int(i)+2)].values[0]) == str and ':' in arrival_time[str(int(i)+2)].values[0]:
+                            subwaytime2 = str(arrival_time[str(int(i)+2)].values[0])
                         else:
                             continue
                     except:
@@ -200,4 +200,4 @@ class SubwayMethod:
     
 if __name__ == '__main__':
     subwaymethod = SubwayMethod()
-    print(subwaymethod.one('영남대'))
+    print(subwaymethod.two('동대구', '안심'))
