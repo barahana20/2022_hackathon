@@ -1,5 +1,7 @@
 enum (SubwayName) {
   description (역 이름)
+  symbol (첫차)
+  symbol (막차)
   symbol (설화명곡)
   symbol (화원)
   symbol (대곡)

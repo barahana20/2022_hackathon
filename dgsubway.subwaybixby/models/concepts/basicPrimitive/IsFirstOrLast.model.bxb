@@ -1,5 +1,5 @@
 enum (IsFirstOrLast){
-  description ("첫차 or 막차 라는 키워드를 인식시키기 위함")
+  description (첫차 or 막차 라는 키워드를 인식시키기 위함)
   symbol(첫차)
   symbol(막차)
 }

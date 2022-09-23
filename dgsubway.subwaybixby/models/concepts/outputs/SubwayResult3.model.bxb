@@ -17,4 +17,13 @@ structure (SubwayResult3){
     type (RightLastTime)
     min (Required) max (One)
   }
+  property (subwayLine){
+    type (SubwayLine)
+    min(Required) max (One)
+  }
+  property (isFirstOrLast){
+    type(SubwayName)
+    min (Required) max(One)
+  }
+  
 }

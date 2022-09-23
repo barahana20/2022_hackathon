@@ -1,6 +1,6 @@
 import console from 'console';
 import http from 'http';
-export default function subwayThree(subwayName) {
+export default function subwayThree(subwayName,isFirstOrLast) {
 
   console.log('http://18.190.78.1:5001/three?subwayname='+subwayName['subwayName'])
   var response = http.getUrl('http://18.190.78.1:5001/three?subwayname='+subwayName['subwayName'], { format: 'json' });
@@ -18,6 +18,8 @@ export default function subwayThree(subwayName) {
     leftFirstTime: leftFirstTime,
     leftLastTime: leftLastTime,
     rightFirstTime: rightFirstTime,
-    rightLastTime: rightLastTime
+    rightLastTime: rightLastTime,
+    subwayLine : 1,
+    isFirstOrLast : subwayName['isFirstOrLast']
   }
 }

@@ -1,0 +1,4 @@
+train (t-w80d0ol7lkjzp1e2160uugweh) {
+  utterance ("[g:SubwayThree] (대구역)[v:SubwayName:대구역] (막차)[v:IsFirstOrLast:막차] 언제야?")
+  last-modified (1663896260726)
+}
