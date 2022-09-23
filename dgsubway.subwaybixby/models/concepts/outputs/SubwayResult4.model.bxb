@@ -9,4 +9,17 @@ structure (SubwayResult4){
     type (LeftLastTime)
     min (Required) max (One)
   }
+  property (subwayLine){
+    type (SubwayLine)
+    min(Required) max(One)
+  }
+  property (subwayDir){
+    type (SubwayDir)
+    min(Required) max(One)
+  }
+  property (isFirstOrLast){
+    type(SubwayName)
+    min(Required) max(One)
+  }
+
 }

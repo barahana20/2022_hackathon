@@ -2,11 +2,24 @@ result-view {
   match: SubwayResult3(this) // 첫차?막차?
    
   message{
-    if(value(this.isFirstOrLast) == '첫차'){
-      template("정방향으로 가는 첫차는, #{value(this.leftFirstTime)}에 출발합니다. \n반대방향으로 가는 첫차는, #{value(this.rightFirstTime)}에 출발합니다.")
+    if(this.subwayLine == 1){
+      if(value(this.isFirstOrLast) == '첫차'){
+        template("설화명곡 방향으로 가는 첫차는, #{value(this.leftFirstTime)}에 출발합니다. \n안심 방향으로 가는 첫차는, #{value(this.rightFirstTime)}에 출발합니다.")
+      }else{
+        template("설화명곡 방향으로 가는 마지막 열차는, #{value(this.leftLastTime)}에 출발합니다. \n안심 방향으로 가는 마지막 열차는, #{value(this.rightLastTime)}에 출발합니다.")
+      }
+    }else-if (this.subwayLine == 2){
+      if(value(this.isFirstOrLast) == '첫차'){
+        template("문양 방향으로 가는 첫차는, #{value(this.leftFirstTime)}에 출발합니다. \n영남대 방향으로 가는 첫차는, #{value(this.rightFirstTime)}에 출발합니다.")
+      }else{
+        template("문양 방향으로 가는 마지막 열차는, #{value(this.leftLastTime)}에 출발합니다. \n영남대 방향으로 가는 마지막 열차는, #{value(this.rightLastTime)}에 출발합니다.")
+      }
     }else{
-      template("정방향으로 가는 마지막 열차는, #{value(this.leftLastTime)}에 출발합니다. \n반대방향으로 가는 마지막 열치는, #{value(this.rightLastTime)}에 출발합니다.")
+      if(value(this.isFirstOrLast) == '첫차'){
+        template("칠곡경대병원 방향으로 가는 첫차는, #{value(this.leftFirstTime)}에 출발합니다. \n용지 방향으로 가는 첫차는, #{value(this.rightFirstTime)}에 출발합니다.")
+      }else{
+        template("칠곡경대병원 방향으로 가는 마지막 열차는, #{value(this.leftLastTime)}에 출발합니다. \n용지 방향으로 가는 마지막 열차는, #{value(this.rightLastTime)}에 출발합니다.")
+      }
     }
-    
   }
 }
