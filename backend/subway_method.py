@@ -120,6 +120,8 @@ class SubwayMethod:
         subway_df = ''
         left_first_train_time = None
         left_last_train_time = None
+        right_first_train_time = None
+        right_last_train_time = None
         for idx, subway in enumerate(self.df):
             if subwayname in subway.values:
                 subway_df = subway
