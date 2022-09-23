@@ -43,11 +43,12 @@ def three():
 def four():
     subwayname = request.args.get('subwayname')
     subwaydir = request.args.get('subwaydir')
-    directionFirstTime, directionLastTime = subwaymethod.four(subwayname, subwaydir)
+    firstTrainTime, lastTrainTime, beforeLastTrainTime = subwaymethod.four(subwayname, subwaydir)
 
     return {
-        'directionFirstTime': directionFirstTime,
-        'directionLastTime': directionLastTime
+        'firstTrainTime': firstTrainTime,
+        'lastTrainTime': lastTrainTime,
+        'beforeLastTrainTime': beforeLastTrainTime
     }
  
 @app.route('/about')

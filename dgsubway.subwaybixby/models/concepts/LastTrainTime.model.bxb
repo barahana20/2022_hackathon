@@ -1,0 +1,3 @@
+integer (LastTrainTime) {
+  description (__DESCRIPTION__)
+}

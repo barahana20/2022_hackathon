@@ -3,9 +3,9 @@ result-view {
    
   message{
     if(value(this.isFirstOrLast) == '첫차'){
-      template("#{value(this.subwayDir)}으로 가는 첫차는, #{value(this.directionFirstTime)}에 출발합니다.")
+      template("#{value(this.subwayDir)}으로 가는 첫차는, #{value(this.firstTrainTime)}에 출발합니다.")
     }else{
-      template("#{value(this.subwayDir)}으로 가는 마지막 열차는, #{value(this.directionLastTime)}에 출발합니다.")
+      template("#{value(this.subwayDir)}으로 가는 마지막 열차는, #{value(this.lastTrainTime)}에 출발합니다.")
     }
   }
 }

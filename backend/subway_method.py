@@ -195,7 +195,7 @@ class SubwayMethod:
             subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
             last_train_time = subwaytime.strftime("%H:%M:%S")
             break
-        return (first_train_time, last_train_time)
+        return (firstTrainTime, lastTrainTime, beforeLastTrainTime)
         
     
 if __name__ == '__main__':

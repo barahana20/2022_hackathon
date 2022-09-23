@@ -1,13 +1,17 @@
 structure (SubwayResult4){
   description (~~역 첫차 or ~~역 막차)
   // 1개 방면 첫차 or 막차 시간 알려주기
-  property (directionFirstTime) {
-    type (LeftFirstTime)
+  property (firstTrainTime) {
+    type (FirstTrainTime)
     min (Required) max (One)
   }
-  property (directionLastTime) {
-    type (LeftLastTime)
+  property (lastTrainTime) {
+    type (LastTrainTime)
     min (Required) max (One)
+  }
+  property (beforeLastTrainTime){
+    type (BeforeLastTrainTime)
+    min (Required) max(One)
   }
   property (subwayLine){
     type (SubwayLine)
