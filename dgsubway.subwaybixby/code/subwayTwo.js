@@ -12,6 +12,7 @@ export default function subwayTwo(subwayName,subwayDir){
   let firstLeftTime = response['firstLeftTime'];
   let secondArrivalTime = response['secondArrivalTime'];
   let secondLeftTime = response['secondLeftTime'];
+  let subwayLine  = response['subwayLine'];
 
   console.log("l1.firstArrivalTime : " + firstArrivalTime)
   console.log("l2.typeof(firstArrivalTime) : " + typeof(firstArrivalTime))
@@ -23,7 +24,7 @@ export default function subwayTwo(subwayName,subwayDir){
     firstLeftTime : firstLeftTime,
     secondArrivalTime : secondArrivalTime,
     secondLeftTime : secondLeftTime,
-    subwayLine : 1,
+    subwayLine : subwayLine,
     subwayDir : subwayName['subwayDir']
   }
 }

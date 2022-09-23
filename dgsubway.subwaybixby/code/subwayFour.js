@@ -8,12 +8,13 @@ export default function subwayFour(subwayName,subwayDir,isFirstOrLast){
   const firstTrainTime = response['firstTrainTime'];
   const lastTrainTime = response['lastTrainTime'];
   const beforeLastTrainTime = response['beforeLastTrainTime'];
+  const subwayLine = response['subwayLine']
 
   return {
     firstTrainTime : firstTrainTime,
     lastTrainTime : lastTrainTime,
     beforeLastTrainTime : beforeLastTrainTime,
-    subwayLine : 1,
+    subwayLine : subwayLine,
     subwayDir : subwayName['subwayDir'],
     isFirstOrLast : subwayName['isFirstOrLast']
   }

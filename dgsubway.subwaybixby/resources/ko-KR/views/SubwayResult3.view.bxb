@@ -2,24 +2,51 @@ result-view {
   match: SubwayResult3(this) // 첫차?막차?
    
   message{
-    if(this.subwayLine == 1){
-      if(value(this.isFirstOrLast) == '첫차'){
-        template("설화명곡 방향으로 가는 첫차는, #{value(this.leftFirstTime)}에 출발합니다. \n안심 방향으로 가는 첫차는, #{value(this.rightFirstTime)}에 출발합니다.")
-      }else{
-        template("설화명곡 방향으로 가는 마지막 열차는, #{value(this.leftLastTime)}에 출발합니다. \n안심 방향으로 가는 마지막 열차는, #{value(this.rightLastTime)}에 출발합니다.")
-      }
-    }else-if (this.subwayLine == 2){
-      if(value(this.isFirstOrLast) == '첫차'){
-        template("문양 방향으로 가는 첫차는, #{value(this.leftFirstTime)}에 출발합니다. \n영남대 방향으로 가는 첫차는, #{value(this.rightFirstTime)}에 출발합니다.")
-      }else{
-        template("문양 방향으로 가는 마지막 열차는, #{value(this.leftLastTime)}에 출발합니다. \n영남대 방향으로 가는 마지막 열차는, #{value(this.rightLastTime)}에 출발합니다.")
-      }
+    if(this.isFirstOrLast == '첫차막차'){
+      template("아래에서 첫차와 막차정보를 확인해 주세요.")
     }else{
-      if(value(this.isFirstOrLast) == '첫차'){
-        template("칠곡경대병원 방향으로 가는 첫차는, #{value(this.leftFirstTime)}에 출발합니다. \n용지 방향으로 가는 첫차는, #{value(this.rightFirstTime)}에 출발합니다.")
+      if(this.subwayLine == 1){
+        if(value(this.isFirstOrLast) == '첫차'){
+          template("설화명곡 방향으로 가는 첫차는, #{value(this.leftFirstTime)}에 출발합니다. \n안심 방향으로 가는 첫차는, #{value(this.rightFirstTime)}에 출발합니다.")
+        }else{
+          template("설화명곡 방향으로 가는 마지막 열차는, #{value(this.leftLastTime)}에 출발합니다. \n안심 방향으로 가는 마지막 열차는, #{value(this.rightLastTime)}에 출발합니다.")
+        }
+      }else-if (this.subwayLine == 2){
+        if(value(this.isFirstOrLast) == '첫차'){
+          template("문양 방향으로 가는 첫차는, #{value(this.leftFirstTime)}에 출발합니다. \n영남대 방향으로 가는 첫차는, #{value(this.rightFirstTime)}에 출발합니다.")
+        }else{
+          template("문양 방향으로 가는 마지막 열차는, #{value(this.leftLastTime)}에 출발합니다. \n영남대 방향으로 가는 마지막 열차는, #{value(this.rightLastTime)}에 출발합니다.")
+        }
       }else{
-        template("칠곡경대병원 방향으로 가는 마지막 열차는, #{value(this.leftLastTime)}에 출발합니다. \n용지 방향으로 가는 마지막 열차는, #{value(this.rightLastTime)}에 출발합니다.")
+        if(value(this.isFirstOrLast) == '첫차'){
+          template("칠곡경대병원 방향으로 가는 첫차는, #{value(this.leftFirstTime)}에 출발합니다. \n용지 방향으로 가는 첫차는, #{value(this.rightFirstTime)}에 출발합니다.")
+        }else{
+          template("칠곡경대병원 방향으로 가는 마지막 열차는, #{value(this.leftLastTime)}에 출발합니다. \n용지 방향으로 가는 마지막 열차는, #{value(this.rightLastTime)}에 출발합니다.")
+        }
       }
+    }
+  }
+  
+  render{
+    if(this.isFirstOrLast == '첫차막차'){
+      layout{section{content{
+        if(this.subwayLine == 1){
+          single-line{text{style(Title_M) value("설화명곡방면 첫차/막차 시간")}}
+          single-line{text{style(Detail_L) value("#{value(this.leftFirstTime)} /  #{value(this.leftLastTime)} ")}}
+          single-line{text{style(Title_M) value("안심방면 첫차/막차 시간")}}
+          single-line{text{style(Detail_L) value("#{value(this.rightFirstTime)} /  #{value(this.rightLastTime)} ")}}
+        }else-if(this.subwayLine == 2){
+          single-line{text{style(Title_M) value("영남대 방면 첫차/막차 시간")}}
+          single-line{text{style(Detail_L) value("#{value(this.leftFirstTime)} /  #{value(this.leftLastTime)} ")}}
+          single-line{text{style(Title_M) value("문양 방면 첫차/막차 시간")}}
+          single-line{text{style(Detail_L) value("#{value(this.rightFirstTime)} /  #{value(this.rightLastTime)} ")}}
+        }else{
+          single-line{text{style(Title_M) value("칠곡경대병원 방면 첫차/막차 시간")}}
+          single-line{text{style(Detail_L) value("#{value(this.leftFirstTime)} /  #{value(this.leftLastTime)} ")}}
+          single-line{text{style(Title_M) value("용지 방면 첫차/막차 시간")}}
+          single-line{text{style(Detail_L) value("#{value(this.rightFirstTime)} /  #{value(this.rightLastTime)} ")}}
+        }
+      }}}
     }
   }
 }

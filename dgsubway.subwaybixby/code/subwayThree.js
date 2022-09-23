@@ -9,17 +9,14 @@ export default function subwayThree(subwayName,isFirstOrLast) {
   const leftLastTime = response['leftLastTime'];
   const rightFirstTime = response['rightFirstTime'];
   const rightLastTime = response['rightLastTime'];
-  console.log(leftFirstTime)
-  console.log(leftLastTime)
-  console.log(rightFirstTime)
-  console.log(rightLastTime)
-  
+  const subwayLine = response['subwayLine'];
+
   return {
     leftFirstTime: leftFirstTime,
     leftLastTime: leftLastTime,
     rightFirstTime: rightFirstTime,
     rightLastTime: rightLastTime,
-    subwayLine : 1,
+    subwayLine : subwayLine,
     isFirstOrLast : subwayName['isFirstOrLast']
   }
 }

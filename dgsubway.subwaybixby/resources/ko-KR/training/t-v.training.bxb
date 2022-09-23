@@ -1,0 +1,4 @@
+train (t-v58zyxzq6s0beuaf4ya6n1rcc) {
+  utterance ("[g:SubwayFour] (수성못역)[v:SubwayName:수성못] (칠곡경대병원행)[v:SubwayDir:칠곡경대병원] (첫차)[v:IsFirstOrLast:첫차] 언제야?")
+  last-modified (1663909395351)
+}
