@@ -161,8 +161,9 @@ class SubwayMethod:
     
     def four(self, subwayname, subwaydir):
         subway_df = ''
-        first_train_time = None
-        last_train_time = None
+        firstTrainTime = None
+        lastTrainTime = None
+        beforeLastTrainTime = None
         for idx, subway in enumerate(self.df):
             if subwayname in subway.values:
                 subway_df = subway
@@ -185,7 +186,7 @@ class SubwayMethod:
             else:
                 continue
             subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
-            first_train_time = subwaytime.strftime("%H:%M:%S")
+            firstTrainTime = subwaytime.strftime("%H:%M:%S")
             break
         for i in arrival_time.loc[:, ::-1]:
             if type(arrival_time.loc[:, ::-1][i].values[0]) == str and ':' in arrival_time.loc[:, ::-1][i].values[0]:
@@ -193,7 +194,7 @@ class SubwayMethod:
             else:
                 continue
             subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
-            last_train_time = subwaytime.strftime("%H:%M:%S")
+            lastTrainTime = subwaytime.strftime("%H:%M:%S")
             break
         return (firstTrainTime, lastTrainTime, beforeLastTrainTime)
         
