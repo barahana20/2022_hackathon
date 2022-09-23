@@ -43,7 +43,7 @@ def three():
 def four():
     subwayname = request.args.get('subwayname')
     subwaydir = request.args.get('subwaydir')
-    directionFirstTime, directionLastTime = subwaymethod.return_first_last_train_time(subwayname, subwaydir)
+    directionFirstTime, directionLastTime = subwaymethod.four(subwayname, subwaydir)
 
     return {
         'directionFirstTime': directionFirstTime,
@@ -55,4 +55,4 @@ def about():
     return 'About 페이지'
 
 if __name__ == '__main__':
-    app.run(port=5001, host='0.0.0.0')
+    app.run(port=5001, host='0.0.0.0', debug=True)
