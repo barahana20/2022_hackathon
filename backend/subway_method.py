@@ -188,7 +188,7 @@ class SubwayMethod:
             arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(하)') & (subway_df['구분'] == '도착')]
             if arrival_time.empty:
                 arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(하)') & (subway_df['구분'] == '출발')]
-        print(arrival_time)
+        
         for i in arrival_time:
             if type(arrival_time[i].values[0]) == str and ':' in arrival_time[i].values[0]:
                 subwaytime = str(arrival_time[i].values[0])
