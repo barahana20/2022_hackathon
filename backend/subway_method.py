@@ -30,13 +30,16 @@ class SubwayMethod:
         down_left_time = None
         up_left_time = None
         subway_df = ''
-        for subway in self.df:
+        for idx, subway in enumerate(self.df):
             if subwayname in subway.values:
                 subway_df = subway
+                subway_index = idx
                 break
+        
+        subwayLine = subway_index+1
         now = datetime.strptime(datetime.now().strftime('%H:%M:%S'), "%H:%M:%S")
         weekday = self.return_week_day()
-       
+        
         arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(상)') & (subway_df['구분'] == '도착')]
         if arrival_time.empty:
             arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(하)') & (subway_df['구분'] == '출발')]
@@ -72,7 +75,7 @@ class SubwayMethod:
                     break
             downsubwaytime = downsubwaytime.strftime("%H:%M:%S")
 
-        return (upsubwaytime, up_left_time, downsubwaytime, down_left_time)
+        return (upsubwaytime, up_left_time, downsubwaytime, down_left_time, subwayLine)
     
     def two(self, subwayname, subwaydir):
         subwaytime1 = None
@@ -83,6 +86,7 @@ class SubwayMethod:
                 subway_df = subway
                 subway_index = idx
                 break
+        subwayLine = subway_index+1
         now = datetime.strptime(datetime.now().strftime('%H:%M:%S'), "%H:%M:%S")
         weekday = self.return_week_day()
         subway_line = self.line[subway_index]
@@ -109,17 +113,19 @@ class SubwayMethod:
                         break
                     subwaytime2 = datetime.strptime(subwaytime2, "%H:%M:%S")
                     left_time2 = (subwaytime2 - now).seconds//60
-                    return (subwaytime1.strftime("%H:%M:%S"), left_time1, subwaytime2.strftime("%H:%M:%S"), left_time2)
+                    return (subwaytime1.strftime("%H:%M:%S"), left_time1, subwaytime2.strftime("%H:%M:%S"), left_time2, subwayLine)
             subwaytime1 = subwaytime1.strftime("%H:%M:%S")
-        return (subwaytime1, left_time1, None, None)
+        return (subwaytime1, left_time1, None, None, subwayLine)
     def three(self, subwayname):
         subway_df = ''
         left_first_train_time = None
         left_last_train_time = None
-        for subway in self.df:
+        for idx, subway in enumerate(self.df):
             if subwayname in subway.values:
                 subway_df = subway
+                subway_index = idx
                 break
+        subwayLine = subway_index+1
         weekday = self.return_week_day()
         left_arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(상)') & (subway_df['구분'] == '도착')]
         right_arrival_time = subway_df.loc[(subway_df['역명'] == subwayname) & (subway_df['요일별'] == f'{weekday}(하)') & (subway_df['구분'] == '도착')]
@@ -157,7 +163,7 @@ class SubwayMethod:
                 subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
                 right_last_train_time = subwaytime.strftime("%H:%M:%S")
                 break
-        return (left_first_train_time, left_last_train_time, right_first_train_time, right_last_train_time)
+        return (left_first_train_time, left_last_train_time, right_first_train_time, right_last_train_time, subwayLine)
     
     def four(self, subwayname, subwaydir):
         subway_df = ''
@@ -169,6 +175,7 @@ class SubwayMethod:
                 subway_df = subway
                 subway_index = idx
                 break
+        subwayLine = subway_index+1
         weekday = self.return_week_day()
         subway_line = self.line[subway_index]
         if subway_line.index(subwayname) < subway_line.index(subwaydir):
@@ -196,7 +203,7 @@ class SubwayMethod:
             subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
             lastTrainTime = subwaytime.strftime("%H:%M:%S")
             break
-        return (firstTrainTime, lastTrainTime, beforeLastTrainTime)
+        return (firstTrainTime, lastTrainTime, beforeLastTrainTime, subwayLine)
         
     
 if __name__ == '__main__':
