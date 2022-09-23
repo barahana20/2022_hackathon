@@ -1,12 +1,15 @@
 structure (SubwayResult4){
   description (~~역 첫차 or ~~역 막차)
   // 1개 방면 첫차 or 막차 시간 알려주기
+
+    // beforeLastTrainTime : beforeLastTrainTime,
+
   property (firstTrainTime) {
-    type (FirstTrainTime)
+    type (LeftFirstTime)
     min (Required) max (One)
   }
   property (lastTrainTime) {
-    type (LastTrainTime)
+    type (LeftLastTime)
     min (Required) max (One)
   }
   property (beforeLastTrainTime){
@@ -25,5 +28,4 @@ structure (SubwayResult4){
     type(SubwayName)
     min(Required) max(One)
   }
-
 }

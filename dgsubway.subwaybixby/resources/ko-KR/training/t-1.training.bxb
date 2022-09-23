@@ -1,0 +1,4 @@
+train (t-1igskfa3xjn2fyprtwl0pm5hm) {
+  utterance ("[g:SubwayThree] (칠곡경대병원역)[v:SubwayName:칠곡경대병원] (첫차막차)[v:IsFirstOrLast:첫차막차] 시간 알려줘")
+  last-modified (1663916978766)
+}
