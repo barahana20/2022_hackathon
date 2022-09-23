@@ -204,15 +204,14 @@ class SubwayMethod:
             else:
                 continue
             subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
+            lastTrainTime = subwaytime.strftime("%H:%M:%S")
             try:
-                if type(arrival_time.loc[str(int(i)-2)].values[0]) == str and ':' in arrival_time.loc[str(int(i)-2)].values[0]:
-                    beforeLastTrainTime = str(arrival_time.loc[str(int(i)-2)].values[0])
+                if type(arrival_time.loc[:, ::-1][str(int(i)-2)].values[0]) == str and ':' in arrival_time.loc[:, ::-1][str(int(i)-2)].values[0]:
+                    beforeLastTrainTime = str(arrival_time.loc[:, ::-1][str(int(i)-2)].values[0])
                 else:
                     continue
             except:
                 break
-            lastTrainTime = subwaytime.strftime("%H:%M:%S")
-            break
         return (firstTrainTime, lastTrainTime, beforeLastTrainTime, subwayLine)
         
     
