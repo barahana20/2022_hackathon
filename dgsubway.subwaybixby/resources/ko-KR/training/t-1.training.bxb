@@ -1,0 +1,4 @@
+train (t-1xjmv2d3kt5y70lr6rfzu59bt) {
+  utterance ("[g:SubwayTwo_ForJunctionStations] (반월당)[v:JunctionStations:반월당] (2)[v:SubwayLine:2]호선 (영남대)[v:SubwayDir:영남대] 방면 열차 언제 와?")
+  last-modified (1664007090953)
+}
