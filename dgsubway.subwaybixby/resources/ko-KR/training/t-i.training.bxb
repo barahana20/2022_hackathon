@@ -1,0 +1,4 @@
+train (t-ix898fzkm3unpv50oi2b2tcpq) {
+  utterance ("[g:SubwayOne_ForJunctionStations] (1호선)[v:SubwayLine:1] (반월당역)[v:JunctionStations:반월당] 열차 언제 와?")
+  last-modified (1664005239047)
+}

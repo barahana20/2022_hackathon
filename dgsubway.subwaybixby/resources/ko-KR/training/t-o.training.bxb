@@ -1,0 +1,4 @@
+train (t-ow164y05g4wu0slf7xd3x05bk) {
+  utterance ("[g:SubwayOne_ForJunctionStations] (1호선)[v:SubwayLine:1] (명덕역)[v:JunctionStations:명덕] 열차 언제 와?")
+  last-modified (1664005470045)
+}
