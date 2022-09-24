@@ -1,4 +1,4 @@
 train (t-ge9uewqpb59wv3mv179zwhpf9) {
-  utterance ("[g:SubwayOne_ForJunctionStations] (2호선)[v:SubwayLine:2] (청라언덕역)[v:JunctionStations:청라언덕] 열차 언제 와?")
-  last-modified (1664005410876)
+  utterance ("[g:SubwayOne_ForJunctionStations] (2)[v:SubwayLine:2]호선 (청라언덕역)[v:JunctionStations:청라언덕] 열차 언제 와?")
+  last-modified (1664006471508)
 }

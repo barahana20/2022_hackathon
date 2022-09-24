@@ -3,6 +3,6 @@ train (t-lu3lz3mx62skgprev5zofuvoh) {
   last-modified (1663922601878)
 }
 train (t-lg6nm2140qyjwzopda5qogiqf) {
-  utterance ("[g:SubwayOne_ForJunctionStations] (2호선)[v:SubwayLine:2] (반월당역)[v:JunctionStations:반월당] 열차 언제 와?")
-  last-modified (1664005302100)
+  utterance ("[g:SubwayOne_ForJunctionStations] (2)[v:SubwayLine:2]호선 (반월당역)[v:JunctionStations:반월당] 열차 언제 와?")
+  last-modified (1664006454215)
 }
