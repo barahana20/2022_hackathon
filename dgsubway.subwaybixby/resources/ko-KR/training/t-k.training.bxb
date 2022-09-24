@@ -2,3 +2,7 @@ train (t-k58o3i4e5vwpcu7qfshbs29g9) {
   utterance ("[g:SubwayOne_ForLastStations] (용지역)[v:SubwayDir:용지] 칠곡경대병원행 열차 언제 와?")
   last-modified (1663985952926)
 }
+train (t-k2umfn4bevi5vjwy8gx6g6b0y) {
+  utterance ("[g:SubwayOne_ForLastStations] (설화명곡역)[v:SubwayDir:설화명곡] 안심행 열차 언제 와?")
+  last-modified (1664000880100)
+}
