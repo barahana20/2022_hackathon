@@ -1,0 +1,16 @@
+action (SubwayThree_ForLastStations) {
+  description (~~역 첫차 or ~~역 막차 (끝역들))
+  // 2개 방면 첫차 or 막차 시간 알려주기
+  collect {
+    input (subwayDir) {
+      type (SubwayDir)
+      min (Required) max (One)
+    }
+    input(isFirstOrLast){
+      type (IsFirstOrLast)
+      min(Required) max (One)
+    }
+  }
+  type (Search)
+  output (SubwayResult3_ForLastStations)
+}

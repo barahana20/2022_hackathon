@@ -1,0 +1,4 @@
+train (t-e7w4u54mj86je3h8b6o4n3vdk) {
+  utterance ("[g:SubwayFour] (구암역)[v:SubwayName:구암] (용지방향)[v:SubwayDir:용지] (첫차)[v:IsFirstOrLast:첫차] 언제 와?")
+  last-modified (1663994040206)
+}

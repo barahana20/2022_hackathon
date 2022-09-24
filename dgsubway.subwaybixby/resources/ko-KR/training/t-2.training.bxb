@@ -1,0 +1,4 @@
+train (t-2aptk8oomr3ax2zxyslfjq676) {
+  utterance ("[g:SubwayThree_ForLastStations] (용지역)[v:SubwayDir:용지] (첫차막차)[v:IsFirstOrLast:첫차막차] 정보 알려줘")
+  last-modified (1663993815744)
+}

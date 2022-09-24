@@ -16,6 +16,10 @@ endpoints {
       accepted-inputs (subwayName, isFirstOrLast)
       local-endpoint (subwayThree.js)
     }
+    action-endpoint (SubwayThree_ForLastStations){
+      accepted-inputs (subwayDir, isFirstOrLast)
+      local-endpoint (subwayThree_ForLastStations.js)
+    }
     action-endpoint(SubwayFour){
       accepted-inputs (subwayName, subwayDir, isFirstOrLast)
       local-endpoint (subwayFour.js)

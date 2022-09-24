@@ -1,0 +1,29 @@
+structure (SubwayResult3_ForLastStations){
+  description (~~역 첫차 or ~~역 막차(끝역))
+  // 1개 방면 첫차 or 막차 시간 알려주기()
+
+  property (firstTrainTime) {
+    type (LeftFirstTime)
+    min (Required) max (One)
+  }
+  property (lastTrainTime) {
+    type (LeftLastTime)
+    min (Required) max (One)
+  }
+  property (beforeLastTrainTime){
+    type (BeforeLastTrainTime)
+    min (Required) max(One)
+  }
+  property (subwayLine){
+    type (SubwayLine)
+    min(Required) max(One)
+  }
+  property (subwayDir){
+    type (SubwayDir)
+    min(Required) max(One)
+  }
+  property (isFirstOrLast){
+    type(SubwayName)
+    min(Required) max(One)
+  }
+}

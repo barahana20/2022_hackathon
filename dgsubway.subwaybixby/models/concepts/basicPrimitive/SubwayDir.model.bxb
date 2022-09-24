@@ -1,5 +1,12 @@
 enum (SubwayDir) {
   description (방면 역 이름)
+
+  //첫차막차
+  symbol (첫차)
+  symbol (막차)
+  symbol (첫차막차)
+
+  //역명
   symbol (설화명곡)
   symbol (안심)
   symbol (영남대)
