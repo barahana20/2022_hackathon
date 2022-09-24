@@ -6,7 +6,3 @@ train (t-w27gitbjo4u8z3kxts4e9hxfc) {
   utterance ("[g:SubwayThree_ForLastStations] (안심역)[v:SubwayDir:안심] (첫차막차)[v:IsFirstOrLast:첫차막차] 정보 알려줘")
   last-modified (1663993763022)
 }
-train (t-wgmh3ndg4y1a9xinukp3pqe1i) {
-  utterance ("[g:SubwayOne_ForJunctionStations] (3호선)[v:SubwayLine:3] (명덕역)[v:JunctionStations:명덕] 열차 언제 와?")
-  last-modified (1664005358697)
-}
