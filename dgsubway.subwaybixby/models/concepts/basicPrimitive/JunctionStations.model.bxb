@@ -1,0 +1,21 @@
+enum (JunctionStations) {
+  description (환승 역 이름)
+
+  //첫차막차
+  symbol (첫차)
+  symbol (막차)
+  symbol (첫차막차)
+
+  //방면
+  symbol (설화명곡)
+  symbol (안심)
+  symbol (영남대)
+  symbol (문양)
+  symbol (칠곡경대병원)
+  symbol (용지)
+
+  //역명
+  symbol (반월당)
+  symbol (청라언덕)
+  symbol (명덕)
+}

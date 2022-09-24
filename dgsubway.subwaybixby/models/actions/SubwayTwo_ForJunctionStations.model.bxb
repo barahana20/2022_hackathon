@@ -1,0 +1,20 @@
+action (SubwayTwo_ForJunctionStations) {
+  description ("~~역 ~~방향(가르쳐 줘)")
+  // 1개 방면 도착정보 2개씩(몇분 남았는지), with 첫차막차 시간 대답으로 띄우기
+  collect {
+    input (junctionStations) {
+      type (JunctionStations)
+      min (Required) max (One)
+    }
+    input (subwayDir) {
+      type (SubwayDir)
+      min (Required) max (One)
+    }
+    input(subwayLine) {
+      type(SubwayLine)
+      min(Optional) max(One) // 얘는 만약에 ~호선 데이터 없을 시 따로 처리할 수 있도록 해 두기.
+    }
+  }
+  type (Search)
+  output (SubwayResult2_ForJunctionStations)
+}

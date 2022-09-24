@@ -1,0 +1,28 @@
+structure (SubwayResult2_ForJunctionStations) {
+  description ("~~역 ~~방향(가르쳐 줘)")
+  // 1개 방면 도착정보 2개씩(몇분 남았는지), with 첫차막차 시간 대답으로 띄우기
+  property (firstArrivalTime) {
+    type (LeftDirectionArrivalTime)
+    min (Optional) max (One)
+  }
+  property (firstLeftTime) {
+    type (LeftDirectionLeftTime)
+    min (Optional) max (One)
+  }
+  property (secondArrivalTime) {
+    type (RightDirectionArrivalTime)
+    min (Optional) max (One)
+  }
+  property (secondLeftTime) {
+    type (RightDirectionLeftTime)
+    min (Optional) max (One)
+  }
+  property (subwayLine){
+    type(SubwayLine)
+    min (Required) max (One)
+  }
+  property (subwayDir){
+    type(SubwayDir)
+    min(Optional) max (One)
+  }
+}

@@ -21,8 +21,7 @@ enum (SubwayName) {
   symbol (현충로)
   symbol (영대병원)
   symbol (교대)
-  //symbol (명덕)
-  //symbol (반월당)
+
   symbol (중앙로)
   symbol (대구역)
   symbol (칠성시장)
