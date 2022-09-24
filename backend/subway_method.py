@@ -25,10 +25,10 @@ class SubwayMethod:
             weekday = '평일'
         return weekday
     def one(self, subwayname):
-        downsubwaytime = None
-        upsubwaytime = None
-        down_left_time = None
-        up_left_time = None
+        leftDirectionArrivalTime = None
+        leftDirectionLeftTime = None
+        rightDirectionArrivalTime = None
+        rightDirectionLeftTime = None
         subway_df = ''
         for idx, subway in enumerate(self.df):
             if subwayname in subway.values:
@@ -54,32 +54,32 @@ class SubwayMethod:
         if arrival_time is not None:
             for i in arrival_time:
                 if type(arrival_time[i].values[0]) == str and ':' in arrival_time[i].values[0]:
-                    upsubwaytime = str(arrival_time[i].values[0])
+                    leftDirectionLeftTime = str(arrival_time[i].values[0])
                 else:
                     continue
-                upsubwaytime = datetime.strptime(upsubwaytime, "%H:%M:%S")
-                if now < upsubwaytime:
-                    up_left_time = (upsubwaytime - now).seconds//60
+                leftDirectionLeftTime = datetime.strptime(leftDirectionLeftTime, "%H:%M:%S")
+                if now < leftDirectionLeftTime:
+                    rightDirectionLeftTime = (leftDirectionLeftTime - now).seconds//60
                     break
-            upsubwaytime = upsubwaytime.strftime("%H:%M:%S")
+            leftDirectionLeftTime = leftDirectionLeftTime.strftime("%H:%M:%S")
         if departure_time is not None:
             for i in departure_time:
                 
                 if type(departure_time[i].values[0]) == str and ':' in departure_time[i].values[0]:
-                    downsubwaytime = str(departure_time[i].values[0])
+                    leftDirectionArrivalTime = str(departure_time[i].values[0])
                 else:
                     continue
-                downsubwaytime = datetime.strptime(downsubwaytime, "%H:%M:%S")
-                if now < downsubwaytime:
-                    down_left_time = (downsubwaytime - now).seconds//60
+                leftDirectionArrivalTime = datetime.strptime(leftDirectionArrivalTime, "%H:%M:%S")
+                if now < leftDirectionArrivalTime:
+                    rightDirectionArrivalTime = (leftDirectionArrivalTime - now).seconds//60
                     break
-            downsubwaytime = downsubwaytime.strftime("%H:%M:%S")
+            leftDirectionArrivalTime = leftDirectionArrivalTime.strftime("%H:%M:%S")
 
-        return (upsubwaytime, up_left_time, downsubwaytime, down_left_time, subwayLine)
+        return (leftDirectionLeftTime, rightDirectionLeftTime, leftDirectionArrivalTime, rightDirectionArrivalTime, subwayLine)
     
     def two(self, subwayname, subwaydir):
-        subwaytime1 = None
-        left_time1 = None
+        firstArrivalTime = None
+        firstLeftTime = None
         subway_df = ''
         for idx, subway in enumerate(self.df):
             if subwayname in subway.values:
@@ -97,31 +97,31 @@ class SubwayMethod:
         if not arrival_time.empty:
             for i in arrival_time:
                 if type(arrival_time[i].values[0]) == str and ':' in arrival_time[i].values[0]:
-                    subwaytime1 = str(arrival_time[i].values[0])
+                    firstArrivalTime = str(arrival_time[i].values[0])
                 else:
                     continue
-                subwaytime1 = datetime.strptime(subwaytime1, "%H:%M:%S")
+                firstArrivalTime = datetime.strptime(firstArrivalTime, "%H:%M:%S")
                 
-                if now < subwaytime1:
-                    left_time1 = (subwaytime1 - now).seconds//60
+                if now < firstArrivalTime:
+                    firstLeftTime = (firstArrivalTime - now).seconds//60
                     try:
                         if type(arrival_time[str(int(i)+2)].values[0]) == str and ':' in arrival_time[str(int(i)+2)].values[0]:
-                            subwaytime2 = str(arrival_time[str(int(i)+2)].values[0])
+                            secondArrivalTime = str(arrival_time[str(int(i)+2)].values[0])
                         else:
                             continue
                     except:
                         break
-                    subwaytime2 = datetime.strptime(subwaytime2, "%H:%M:%S")
-                    left_time2 = (subwaytime2 - now).seconds//60
-                    return (subwaytime1.strftime("%H:%M:%S"), left_time1, subwaytime2.strftime("%H:%M:%S"), left_time2, subwayLine)
-            subwaytime1 = subwaytime1.strftime("%H:%M:%S")
-        return (subwaytime1, left_time1, None, None, subwayLine)
+                    secondArrivalTime = datetime.strptime(secondArrivalTime, "%H:%M:%S")
+                    secondLeftTime = (secondArrivalTime - now).seconds//60
+                    return (firstArrivalTime.strftime("%H:%M:%S"), firstLeftTime, secondArrivalTime.strftime("%H:%M:%S"), secondLeftTime, subwayLine)
+            firstArrivalTime = firstArrivalTime.strftime("%H:%M:%S")
+        return (firstArrivalTime, firstLeftTime, None, None, subwayLine)
     def three(self, subwayname):
         subway_df = ''
-        left_first_train_time = None
-        left_last_train_time = None
-        right_first_train_time = None
-        right_last_train_time = None
+        leftFirstTime = None
+        leftLastTime = None
+        rightFirstTime = None
+        rightLastTime = None
         for idx, subway in enumerate(self.df):
             if subwayname in subway.values:
                 subway_df = subway
@@ -138,7 +138,7 @@ class SubwayMethod:
                 else:
                     continue
                 subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
-                left_first_train_time = subwaytime.strftime("%H:%M:%S")
+                leftFirstTime = subwaytime.strftime("%H:%M:%S")
                 break
             for i in left_arrival_time.loc[:, ::-1]:
                 if type(left_arrival_time.loc[:, ::-1][i].values[0]) == str and ':' in left_arrival_time.loc[:, ::-1][i].values[0]:
@@ -146,7 +146,7 @@ class SubwayMethod:
                 else:
                     continue
                 subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
-                left_last_train_time = subwaytime.strftime("%H:%M:%S")
+                leftLastTime = subwaytime.strftime("%H:%M:%S")
                 break
         if not right_arrival_time.empty:
             for i in right_arrival_time:
@@ -155,7 +155,7 @@ class SubwayMethod:
                 else:
                     continue
                 subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
-                right_first_train_time = subwaytime.strftime("%H:%M:%S")
+                rightFirstTime = subwaytime.strftime("%H:%M:%S")
                 break
             for i in right_arrival_time.loc[:, ::-1]:
                 if type(right_arrival_time.loc[:, ::-1][i].values[0]) == str and ':' in right_arrival_time.loc[:, ::-1][i].values[0]:
@@ -163,9 +163,9 @@ class SubwayMethod:
                 else:
                     continue
                 subwaytime = datetime.strptime(subwaytime, "%H:%M:%S")
-                right_last_train_time = subwaytime.strftime("%H:%M:%S")
+                rightLastTime = subwaytime.strftime("%H:%M:%S")
                 break
-        return (left_first_train_time, left_last_train_time, right_first_train_time, right_last_train_time, subwayLine)
+        return (leftFirstTime, leftLastTime, rightFirstTime, rightLastTime, subwayLine)
     
     def four(self, subwayname, subwaydir):
         subway_df = ''
