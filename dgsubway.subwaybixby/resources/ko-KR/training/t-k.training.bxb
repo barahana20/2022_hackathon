@@ -6,3 +6,7 @@ train (t-k2umfn4bevi5vjwy8gx6g6b0y) {
   utterance ("[g:SubwayOne_ForLastStations] (설화명곡역)[v:SubwayDir:설화명곡] 안심행 열차 언제 와?")
   last-modified (1664000880100)
 }
+train (t-kp7byamylodnd7q5vhqh3xiyj) {
+  utterance ("[g:SubwayTwo] (상인역)[v:SubwayName:상인] (안심)[v:SubwayDir:안심] 언제 와?")
+  last-modified (1664009176909)
+}
