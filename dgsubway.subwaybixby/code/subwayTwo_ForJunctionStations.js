@@ -6,10 +6,10 @@ export default function subwayTwo(junctionStations,subwayLine,subwayDir){
     subwayLine = findSubwayLine(subwayDir)
   }
   
-  console.log('http://18.190.78.1:5001/two_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwaydir='+junctionStations['subwayDir']);
+  console.log('http://18.190.78.1:5001/two_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwaydir='+junctionStations['subwayDir']+'&subwayLine='+junctionStations['subwayLine']);
   console.log(junctionStations['subwayDir'])
   console.log(junctionStations)
-  var response = http.getUrl('http://18.190.78.1:5001/two_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwaydir='+junctionStations['subwayDir'],{ format: 'json' });
+  var response = http.getUrl('http://18.190.78.1:5001/two_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwaydir='+junctionStations['subwayDir']+'&subwayLine='+junctionStations['subwayLine'],{ format: 'json' });
   console.log(response);
 
   let firstArrivalTime = response['firstArrivalTime'];
