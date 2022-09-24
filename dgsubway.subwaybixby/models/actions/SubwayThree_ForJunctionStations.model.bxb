@@ -16,5 +16,5 @@ action (SubwayThree_ForJunctionStations) {
     }
   }
   type (Search)
-  output (SubwayResult3)
+  output (SubwayResult3_ForJunctionStations)
 }

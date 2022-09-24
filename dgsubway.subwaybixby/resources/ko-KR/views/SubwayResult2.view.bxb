@@ -2,11 +2,6 @@ result-view {
   match: SubwayResult2(this)
   
   message{
-    // if(size(this.firstLeftTime) == 0 || size(this.firstArrivalTime) == 0){
-    //   template ("#{value(this.subwayDir)}으로 가는 마지막 열차가 지나갔습니다. #{size(this.firstLeftTime)} #{size(this.firstArrivalTime)}")
-    // }else{
-    //   template("#{value(this.subwayDir)}으로 가는 열차는, #{value(this.firstLeftTime)}분 뒤에 도착합니다.")
-    // }
     template("#{value(this.subwayDir)}으로 가는 열차는, #{value(this.firstLeftTime)}분 뒤에 도착합니다.")
   }  
 
