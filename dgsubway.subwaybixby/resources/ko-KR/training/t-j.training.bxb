@@ -6,3 +6,7 @@ train (t-jj5hv0op4b6va6xxy8um2j1bp) {
   utterance ("[g:SubwayThree] (어린이회관역)[v:SubwayName:어린이회관] (첫차막차)[v:IsFirstOrLast:첫차막차] 시간 알려 줘")
   last-modified (1663916841897)
 }
+train (t-jtiu5qcu7h8l4e8mjn83m0nxo) {
+  utterance ("[g:SubwayOne_ForLastStations] (설화명곡역)[v:SubwayDir:설화명곡] 열차 언제 와?")
+  last-modified (1663980467689)
+}

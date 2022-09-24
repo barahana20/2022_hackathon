@@ -4,6 +4,10 @@ endpoints {
       accepted-inputs (subwayName)
       local-endpoint (subwayOne.js)
     }
+    action-endpoint (SubwayOne_ForLastStations){
+      accepted-inputs (subwayDir)
+      local-endpoint (subwayOne_ForLastStations.js)
+    }
     action-endpoint(SubwayTwo){
       accepted-inputs (subwayName, subwayDir)
       local-endpoint (subwayTwo.js)

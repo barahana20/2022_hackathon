@@ -1,0 +1,11 @@
+action (SubwayOne_ForLastStations) {
+  description (끝역 관련 시간 처리 Action 입니다.)
+  collect {
+    input (subwayDir) {
+      type (SubwayDir)
+      min (Required) max (One)
+    }
+  }
+  type(Search)
+  output (SubwayResult1_ForLastStations)
+}

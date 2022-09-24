@@ -1,0 +1,29 @@
+structure (SubwayResult1_ForLastStations) {
+  description ("~~역 (가르쳐 줘)! 끝역 버전")
+  // 끝 역이니, 단방향으로다가 채우기.
+  // 이미 끝역이니, SubwayResult2 와 동일한 output structure를 가질수 있음.
+  property (firstArrivalTime) {
+    type (LeftDirectionArrivalTime)
+    min (Optional) max (One)
+  }
+  property (firstLeftTime) {
+    type (LeftDirectionLeftTime)
+    min (Optional) max (One)
+  }
+  property (secondArrivalTime) {
+    type (RightDirectionArrivalTime)
+    min (Optional) max (One)
+  }
+  property (secondLeftTime) {
+    type (RightDirectionLeftTime)
+    min (Optional) max (One)
+  }
+  property (subwayLine){
+    type(SubwayLine)
+    min (Required) max (One)
+  }
+  property (subwayDir){
+    type(SubwayDir)
+    min(Optional) max (One)
+  }
+}

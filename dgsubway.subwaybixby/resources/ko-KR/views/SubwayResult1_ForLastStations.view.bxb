@@ -1,0 +1,67 @@
+result-view {
+  match: SubwayResult1_ForLastStations(this)
+  
+  message{
+    // if(size(this.firstLeftTime) == 0 || size(this.firstArrivalTime) == 0){
+    //   template ("#{value(this.subwayDir)}으로 가는 마지막 열차가 지나갔습니다. #{size(this.firstLeftTime)} #{size(this.firstArrivalTime)}")
+    // }else{
+    //   template("#{value(this.subwayDir)}으로 가는 열차는, #{value(this.firstLeftTime)}분 뒤에 도착합니다.")
+    // }
+    template("#{value(this.subwayDir)}으로 가는 열차는, #{value(this.firstLeftTime)}분 뒤에 도착합니다.")
+  }  
+
+  render{
+    layout{
+      section{
+        content{
+          if(size(this.firstLeftTime) == 0){
+            single-line{
+              text{
+                style(Detail_L)
+                value("오늘의 마지막 열차가 지나갔습니다.")
+              }
+            }
+          }else-if(size(this.secondLeftTime) == 0){
+            single-line{
+              text{
+                style(Title_M)
+                value("#{value(this.subwayDir)} 방면 마지막 열차")
+              }
+            }
+            single-line{
+              text{
+                style(Detail_L)
+                value("#{value(this.firstArrivalTime)}")
+              }
+            }
+          }else{
+            single-line{
+              text{
+                style(Title_M)
+                value("#{value(this.subwayDir)}방면 이번 도착시간")
+              }
+            }
+            single-line{
+              text{
+                style(Detail_L)
+                value("#{value(this.firstArrivalTime)}")
+              }
+            }
+            single-line{
+              text{
+                style(Title_M)
+                value("#{value(this.subwayDir)}방면 다음 도착시간")
+              }
+            }
+            single-line{
+              text{
+                style(Detail_L)
+                value("#{value(this.secondArrivalTime)}")
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

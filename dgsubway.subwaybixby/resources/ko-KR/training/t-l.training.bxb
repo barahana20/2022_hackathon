@@ -1,0 +1,4 @@
+train (t-lu3lz3mx62skgprev5zofuvoh) {
+  utterance ("[g:SubwayFour] (신천역)[v:SubwayName:신천] (설화명곡행)[v:SubwayDir:설화명곡] (막차)[v:IsFirstOrLast:막차] 언제야?")
+  last-modified (1663922601878)
+}
