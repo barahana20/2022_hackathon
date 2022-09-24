@@ -2,12 +2,12 @@ import console from 'console';
 import http from 'http';
 export default function subwayOne_ForLastStations(subwayDir){
 
-  var oppositeStation = searchSubwayDir(subwayDir)
-  
-  console.log('http://18.190.78.1:5001/two?subwayname='+subwayDir['subwayDir']+'&subwaydir='+subwayDir[oppositeStation]);
-  console.log(subwayDir['oppositeStation'])
-  console.log(subwayDir)
-  var response = http.getUrl('http://18.190.78.1:5001/two?subwayname='+subwayDir['subwayName']+'&subwaydir='+subwayDir['oppositeStation'], { format: 'json' });
+  var oppositeStation = searchSubwayDir(subwayDir['subwayDir']);
+  console.log("1. subwayDir['subwayDir'] " + subwayDir['subwayDir'])
+  console.log("2. typeof(subwayDir['subwayDir'] " + typeof(subwayDir['subwayDir']))
+  console.log('http://18.190.78.1:5001/two?subwayname='+subwayDir['subwayDir']+'&subwaydir='+oppositeStation)
+
+  var response = http.getUrl('http://18.190.78.1:5001/two?subwayname='+subwayDir['subwayDir']+'&subwaydir='+oppositeStation,{ format: 'json' });
   console.log(response);
 
   let firstArrivalTime = response['firstArrivalTime'];
