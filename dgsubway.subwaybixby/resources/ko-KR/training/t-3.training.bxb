@@ -1,0 +1,4 @@
+train (t-3cv8pczvwlmnav0zrgndk682x) {
+  utterance ("[g:SubwayFour_ForJunctionStations] (반월당역)[v:JunctionStations:반월당] (2)[v:SubwayLine:2]호선 (영남대)[v:SubwayDir:영남대]방향 (막차)[v:IsFirstOrLast:막차] 언제야?")
+  last-modified (1664020013531)
+}

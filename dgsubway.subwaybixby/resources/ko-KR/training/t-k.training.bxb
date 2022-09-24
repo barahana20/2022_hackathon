@@ -10,3 +10,7 @@ train (t-kp7byamylodnd7q5vhqh3xiyj) {
   utterance ("[g:SubwayTwo] (상인역)[v:SubwayName:상인] (안심)[v:SubwayDir:안심] 언제 와?")
   last-modified (1664009176909)
 }
+train (t-k4zzai1s5u4fs7op6993y4k45) {
+  utterance ("[g:SubwayTwo_ForJunctionStations] (명덕역)[v:JunctionStations:명덕] (칠곡경대병원 방면)[v:SubwayDir:칠곡경대병원] 열차 언제 출발해?")
+  last-modified (1664022536717)
+}

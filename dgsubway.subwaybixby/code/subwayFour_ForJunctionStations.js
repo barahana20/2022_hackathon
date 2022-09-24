@@ -1,7 +1,7 @@
 import console from 'console';
 import http from 'http';
 export default function subwayFour_ForJunctionStations(junctionStations,subwayDir,isFirstOrLast, subwayLine){
-subwayLine = junctionStations['subwayLine']
+  subwayLine = junctionStations['subwayLine']
 
   if(subwayLine == null){
     subwayLine = findSubwayLine(junctionStations['subwayDir'])
@@ -20,12 +20,14 @@ subwayLine = junctionStations['subwayLine']
   console.log(lastTrainTime);
   console.log(beforeLastTrainTime);
   console.log(subwayLine);
+  console.log(subwayDir)
+  console.log(junctionStations['subwayDir'])
 
   return {
     beforeLastTrainTime : beforeLastTrainTime,
     firstTrainTime : firstTrainTime,
     lastTrainTime : lastTrainTime,
-    subwayLine : junctionStations['subwayLine'],
+    subwayLine : subwayLine,
     subwayDir : junctionStations['subwayDir'],
     isFirstOrLast : junctionStations['isFirstOrLast']
   }
@@ -41,6 +43,5 @@ function findSubwayLine(subwayDir){
     case '칠곡경대병원':
     case '용지':
       return 3;  
-
   }
 }

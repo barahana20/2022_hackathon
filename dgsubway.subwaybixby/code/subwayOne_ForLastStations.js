@@ -16,10 +16,7 @@ export default function subwayOne_ForLastStations(subwayDir){
   let secondLeftTime = response['secondLeftTime'];
   let subwayLine  = response['subwayLine'];
 
-  console.log("l1.firstArrivalTime : " + firstArrivalTime)
-  console.log("l2.typeof(firstArrivalTime) : " + typeof(firstArrivalTime))
-  console.log("l3.firstLeftTime : "+ firstLeftTime)
-  console.log("l4.typeof(firstLeftTime) : "+ typeof(firstLeftTime))
+  console.log(oppositeStation)
 
   return {
     firstArrivalTime : firstArrivalTime,
@@ -27,7 +24,7 @@ export default function subwayOne_ForLastStations(subwayDir){
     secondArrivalTime : secondArrivalTime,
     secondLeftTime : secondLeftTime,
     subwayLine : subwayLine,
-    subwayDir : subwayDir[oppositeStation]
+    subwayDir : oppositeStation
   }
 }
 function searchSubwayDir(subwayName){

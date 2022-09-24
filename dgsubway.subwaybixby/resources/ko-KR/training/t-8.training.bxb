@@ -6,3 +6,7 @@ train (t-8t7r1fckxxbduu6gj0o45v1ch) {
   utterance ("[g:SubwayTwo_ForJunctionStations] (반월당)[v:JunctionStations:반월당] (2)[v:SubwayLine:2]호선 (영남대)[v:SubwayDir:영남대] 방면 언제 와?")
   last-modified (1664007120221)
 }
+train (t-8odiqr7i5mceg869vokeyjjqf) {
+  utterance ("[g:SubwayOne_ForLastStations] (용지역)[v:SubwayDir:용지] 열차 언제 출발해?")
+  last-modified (1664023745818)
+}
