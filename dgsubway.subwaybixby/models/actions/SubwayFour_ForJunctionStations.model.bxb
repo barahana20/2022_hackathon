@@ -1,0 +1,25 @@
+action (SubwayFour_ForJunctionStations) {
+  description (~~역 ~~방향 첫차 or 막차)
+  // 해당 방면 첫차 or 막차 시간 알려주기
+
+  collect {
+    input (junctionStations) {
+      type (JunctionStations)
+      min (Required) max (One)
+    }
+    input (subwayDir) {
+      type (SubwayDir)
+      min (Required) max (One)
+    }
+    input(isFirstOrLast){
+      type(IsFirstOrLast)
+      min(Required) max (One)
+    }
+    input(subwayLine) {
+      type (SubwayLine)
+      min(Optional) max(One)
+    }
+  }
+  type (Search)
+  output (SubwayResult4_ForJunctionStations)
+}

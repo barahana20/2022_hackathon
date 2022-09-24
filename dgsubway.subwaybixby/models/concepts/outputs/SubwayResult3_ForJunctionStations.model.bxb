@@ -24,6 +24,5 @@ structure (SubwayResult3_ForJunctionStations){
   property (isFirstOrLast){
     type(SubwayName)
     min (Required) max(One)
-  }
-  
+  } 
 }

@@ -1,0 +1,28 @@
+structure (SubwayResult4_ForJunctionStations){
+  description (~~역 첫차 or ~~역 막차(환승역 ver.))
+  
+  property (firstTrainTime) {
+    type (LeftFirstTime)
+    min (Required) max (One)
+  }
+  property (lastTrainTime) {
+    type (LeftLastTime)
+    min (Required) max (One)
+  }
+  property (beforeLastTrainTime){
+    type (BeforeLastTrainTime)
+    min (Required) max(One)
+  }
+  property (subwayLine){
+    type (SubwayLine)
+    min(Required) max(One)
+  }
+  property (subwayDir){
+    type (SubwayDir)
+    min(Required) max(One)
+  }
+  property (isFirstOrLast){
+    type(SubwayName)
+    min(Required) max(One)
+  }
+}

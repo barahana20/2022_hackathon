@@ -1,5 +1,5 @@
 result-view {
-  match: SubwayResult2(this)
+  match: SubwayResult2_ForJunctionStations(this)
   
   message{
     // if(size(this.firstLeftTime) == 0 || size(this.firstArrivalTime) == 0){
