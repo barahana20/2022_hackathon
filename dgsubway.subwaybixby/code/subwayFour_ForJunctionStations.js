@@ -2,9 +2,11 @@ import console from 'console';
 import http from 'http';
 export default function subwayFour_ForJunctionStations(junctionStations,subwayDir,isFirstOrLast, subwayLine){
   
-  if(junctionStations['subwayLine'] == null){
+  if(subwayLine == null){
     subwayLine = findSubwayLine(junctionStations['subwayDir'])
   }
+  
+  
   
   console.log('http://18.190.78.1:5001/four_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwaydir='+junctionStations['subwayDir']+'&subwayLine='+subwayLine);
   var response = http.getUrl('http://18.190.78.1:5001/four_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwaydir='+junctionStations['subwayDir']+'&subwayLine='+subwayLine, { format: 'json' });
@@ -22,7 +24,7 @@ export default function subwayFour_ForJunctionStations(junctionStations,subwayDi
     beforeLastTrainTime : beforeLastTrainTime,
     firstTrainTime : firstTrainTime,
     lastTrainTime : lastTrainTime,
-    subwayLine : subwayLine,
+    subwayLine : junctionStations['subwayLine'],
     subwayDir : junctionStations['subwayDir'],
     isFirstOrLast : junctionStations['isFirstOrLast']
   }

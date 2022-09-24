@@ -2,14 +2,19 @@ import console from 'console';
 import http from 'http';
 export default function subwayTwo(junctionStations,subwayLine,subwayDir){
 
-  if(subwayLine == null){
-    subwayLine = findSubwayLine(subwayDir)
-  }
+  console.log(subwayLine)
   
-  console.log('http://18.190.78.1:5001/two_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwaydir='+junctionStations['subwayDir']+'&subwayLine='+junctionStations['subwayLine']);
+  if(subwayLine == null){
+    subwayLine = findSubwayLine(junctionStations['subwayDir'])
+  }
+  console.log(junctionStations['subwayDir'])
+  console.log(subwayLine)
+  console.log(junctionStations['subwayLine'])
+  
+  console.log('http://18.190.78.1:5001/two_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwaydir='+junctionStations['subwayDir']+'&subwayLine='+subwayLine);
   console.log(junctionStations['subwayDir'])
   console.log(junctionStations)
-  var response = http.getUrl('http://18.190.78.1:5001/two_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwaydir='+junctionStations['subwayDir']+'&subwayLine='+junctionStations['subwayLine'],{ format: 'json' });
+  var response = http.getUrl('http://18.190.78.1:5001/two_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwaydir='+junctionStations['subwayDir']+'&subwayLine='+subwayLine,{ format: 'json' });
   console.log(response);
 
   let firstArrivalTime = response['firstArrivalTime'];
