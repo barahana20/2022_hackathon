@@ -14,13 +14,13 @@ export default function subwayThree_ForJunctionStations(junctionStations,isFirst
   console.log(firstTrainTime);
   console.log(lastTrainTime);
   console.log(beforeLastTrainTime);
-  console.log(subwayLine);
+  console.log(junctionStations['subwayLine']);
 
   return {
     beforeLastTrainTime : beforeLastTrainTime,
     firstTrainTime : firstTrainTime,
     lastTrainTime : lastTrainTime,
-    subwayLine : subwayLine,
+    subwayLine : junctionStations['subwayLine'],
     isFirstOrLast : junctionStations['isFirstOrLast']
   }
 }

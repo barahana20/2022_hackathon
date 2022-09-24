@@ -3,7 +3,7 @@ import http from 'http';
 export default function subwayOne_ForJunctionStations(junctionStations,subwayLine) {
 
   // 환승역 관련 JS파일. 백앤드 메소드 필요.
-
+  
   console.log('http://18.190.78.1:5001/one_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwayLine='+junctionStations['subwayLine'])
   console.log(junctionStations)
   var response = http.getUrl('http://18.190.78.1:5001/one_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwayLine='+junctionStations['subwayLine'], { format: 'json' });
@@ -18,6 +18,6 @@ export default function subwayOne_ForJunctionStations(junctionStations,subwayLin
     leftDirectionLeftTime: leftDirectionLeftTime,
     rightDirectionArrivalTime: rightDirectionArrivalTime,
     rightDirectionLeftTime: rightDirectionLeftTime,
-    subwayLine : subwayLine
+    subwayLine : junctionStations['subwayLine'],
   }
 }
