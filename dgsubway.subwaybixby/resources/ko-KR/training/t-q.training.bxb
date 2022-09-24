@@ -6,3 +6,7 @@ train (t-qb779e92d86hrpmlnjxno0lci) {
   utterance ("[g:SubwayTwo] (대곡역)[v:SubwayName:대곡] (안심방향)[v:SubwayDir:안심] 열차 언제 출발해?")
   last-modified (1663992677951)
 }
+train (t-qh1zr8g2v6pfyyg97rp10x9gg) {
+  utterance ("[g:SubwayTwo_ForJunctionStations] (반월당)[v:JunctionStations:반월당] (1)[v:SubwayLine:1]호선 (안심행)[v:SubwayDir:안심] 열차 언제 와?")
+  last-modified (1664007013538)
+}

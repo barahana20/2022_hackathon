@@ -2,3 +2,7 @@ train (t-u4u225y56aupaawcuu6kiz0il) {
   utterance ("[g:SubwayOne_ForLastStations] (설화명곡역)[v:SubwayDir:설화명곡] 안심방향 열차 언제 출발해?")
   last-modified (1663992806352)
 }
+train (t-u4o8qsy0tt5v2cr8emc27afgh) {
+  utterance ("[g:SubwayOne] (대구역)[v:SubwayName:대구역] 언제 와?")
+  last-modified (1664007159859)
+}

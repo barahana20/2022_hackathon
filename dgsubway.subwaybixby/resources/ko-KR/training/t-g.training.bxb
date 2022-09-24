@@ -6,3 +6,7 @@ train (t-g22x6572oonw0121efpgjz9b5) {
   utterance ("[g:SubwayTwo_ForJunctionStations] (명덕역)[v:JunctionStations:명덕] (1)[v:SubwayLine:1]호선 (안심행)[v:SubwayDir:안심] 열차 언제 와?")
   last-modified (1664006467010)
 }
+train (t-g0jprxddsp8llcf3xf6s8j2uk) {
+  utterance ("[g:SubwayTwo_ForJunctionStations] (반월당)[v:JunctionStations:반월당] (영남대)[v:SubwayDir:영남대] 방면 언제 와?")
+  last-modified (1664007259801)
+}
