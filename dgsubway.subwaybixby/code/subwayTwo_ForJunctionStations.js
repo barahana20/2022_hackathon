@@ -1,6 +1,6 @@
 import console from 'console';
 import http from 'http';
-export default function subwayTwo(junctionStations,subwayLine,subwayDir,){
+export default function subwayTwo(junctionStations,subwayLine,subwayDir){
 
   if(subwayLine == null){
     subwayLine = findSubwayLine(subwayDir)
