@@ -1,0 +1,8 @@
+train (t-pcaubvby5al0phwl0xiuvjsgp) {
+  utterance ("[g:SubwayThree_ForJunctionStations] (반월당역)[v:JunctionStations:반월당] (1)[v:SubwayLine:1]호선 (첫차)[v:IsFirstOrLast:첫차] 언제 와?")
+  last-modified (1664007009716)
+}
+train (t-p1auh2i76xt0kybjia8x9g1tz) {
+  utterance ("[g:SubwayThree_ForJunctionStations] (청라언덕역)[v:JunctionStations:청라언덕] (3)[v:SubwayLine:3]호선 (첫차막차)[v:IsFirstOrLast:첫차막차] 정보 알려줘")
+  last-modified (1664007117649)
+}

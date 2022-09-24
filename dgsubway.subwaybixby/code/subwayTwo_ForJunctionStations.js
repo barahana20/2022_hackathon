@@ -42,6 +42,5 @@ function findSubwayLine(subwayDir){
     case '칠곡경대병원':
     case '용지':
       return 3;  
-
   }
 }

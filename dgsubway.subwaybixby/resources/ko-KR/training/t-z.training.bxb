@@ -2,3 +2,7 @@ train (t-z133av4sb381e4v7b6btzvnq1) {
   utterance ("[g:SubwayThree_ForLastStations] (설화명곡역)[v:SubwayDir:설화명곡] (막차)[v:IsFirstOrLast:막차] 언제 출발해?")
   last-modified (1664006525084)
 }
+train (t-z2eh2i02qagjohuatqs16dd7c) {
+  utterance ("[g:SubwayThree_ForJunctionStations] (반월당역)[v:JunctionStations:반월당] (2)[v:SubwayLine:2]호선 (막차)[v:IsFirstOrLast:막차] 언제야?")
+  last-modified (1664007062036)
+}

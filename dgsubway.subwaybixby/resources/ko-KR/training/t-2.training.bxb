@@ -1,0 +1,4 @@
+train (t-2jdmbhpemd4pk092ut4su813j) {
+  utterance ("[g:SubwayThree_ForJunctionStations] (3)[v:SubwayLine:3]호선 (명덕역)[v:JunctionStations:명덕] (막차)[v:IsFirstOrLast:막차] 언제야")
+  last-modified (1664007218696)
+}
