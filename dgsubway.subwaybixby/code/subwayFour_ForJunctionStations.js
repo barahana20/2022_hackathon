@@ -6,8 +6,8 @@ export default function subwayFour_ForJunctionStations(junctionStations,subwayDi
     subwayLine = findSubwayLine(junctionStations['subwayDir'])
   }
   
-  console.log('http://18.190.78.1:5001/four?subwayname='+junctionStations['junctionStations']+'&subwaydir='+junctionStations['subwayDir']+'&subwayLine='+subwayLine);
-  var response = http.getUrl('http://18.190.78.1:5001/four?subwayname='+junctionStations['junctionStations']+'&subwaydir='+junctionStations['subwayDir']+'&subwayLine='+subwayLine, { format: 'json' });
+  console.log('http://18.190.78.1:5001/four_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwaydir='+junctionStations['subwayDir']+'&subwayLine='+subwayLine);
+  var response = http.getUrl('http://18.190.78.1:5001/four_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwaydir='+junctionStations['subwayDir']+'&subwayLine='+subwayLine, { format: 'json' });
   console.log(response);
   const beforeLastTrainTime = response["beforeLastTrainTime"];
   const firstTrainTime = response["firstTrainTime"];
