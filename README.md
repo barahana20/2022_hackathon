@@ -15,9 +15,9 @@
   - 이제는 빅스비를 통해, __대구 시민들은 대구도시철도 열차 정보에 대해서 쉽고 편하게 확인__ 할 수 있을 것입니다.
 
 - 프로젝트에 사용된 기술
-  - 프론트 엔드(FE) 기술 : Bixby Platform
+  - 프론트 엔드(FE) 기술 : __Bixby Platform__
     - NodeJs 기반 JavaScript와 Bixby 언어를 활용하여, 빅스비를 통해 사용자와 소통할 수 있게 함.
-  - 백엔드(BE) 기술 : Python Flask, Bixby AI, AWS
+  - 백엔드(BE) 기술 : __Python Flask__, __Bixby AI__, __AWS__
     - Python Flask Framework를 사용하여 API 서버를 구축
     - 24시간 서비스를 위해 AWS EC2 를 이용해 API 서버를 호스팅
     - Bixby AI 에게 많은 Training Data를 학습시켜 사용자 예상 발화를 인지함
