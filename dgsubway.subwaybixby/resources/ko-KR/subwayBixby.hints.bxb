@@ -1,7 +1,12 @@
-// hints{
-//   uncategorized{
-//     hint ("대구지하철 상인역 언제 와?"){
-//       preferred-hint ("대구지하철")
-//     }
-//   }
-// }
+hints{
+  visibility-constraints {
+    target-constraints {
+      allowed-list {
+        allow (ko-KR)
+      }
+    }
+  }
+  uncategorized{
+    hint (대구지하철에서 대구역 설화명곡행 첫 차)
+  }
+}
