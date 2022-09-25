@@ -36,3 +36,13 @@
 
 - 시연 영상
   - 유튜브 링크 : https://www.youtube.com/watch?v=CUKjJ036K7Y
+
+## Contributor
+
+| 이름 | 전공 |
+|---|---|---|
+| 이주형 | 컴퓨터학부 |
+|---|---|---|
+| 남동우 | 공과대학 응용화학공학부 |
+
+| 황아영  | 컴퓨터학부 |ayxxng73@gmail.com|
