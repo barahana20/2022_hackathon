@@ -1,5 +1,7 @@
 # 해커톤 보고서 - [자유 세션] 대구도시철도 열차정보 Bixby Application
 
+<img src = "images/main_icon.png" width = 650px /></center>
+
 - 팀명
   - 대프리카김밥천국
   
@@ -8,6 +10,8 @@
 
 - 프로젝트 한 줄 설명
   - 대구도시철도 열차 정보를 빅스비를 이용해 간단하게 확인 가능
+  
+<img src = "images/play_image.png" height = 700px>  
 
 - 프로젝트에 대한 설명
   - 저희는 알람을 맞추거나 날씨 정보를 확인할 때 "시리야", "하이 빅스비" 등 음성 인식 AI를 통해 편하게 사용합니다.
