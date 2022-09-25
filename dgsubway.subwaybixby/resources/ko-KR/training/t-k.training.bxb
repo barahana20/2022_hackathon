@@ -14,3 +14,7 @@ train (t-k4zzai1s5u4fs7op6993y4k45) {
   utterance ("[g:SubwayTwo_ForJunctionStations] (명덕역)[v:JunctionStations:명덕] (칠곡경대병원 방면)[v:SubwayDir:칠곡경대병원] 열차 언제 출발해?")
   last-modified (1664022536717)
 }
+train (t-k1eg2jffy4ky6d4tfk23hkhex) {
+  utterance ("[g:SubwayThree_ForLastStations] (영대역)[v:SubwayDir:영남대] (막차)[v:IsFirstOrLast:막차] 언제야?")
+  last-modified (1664078725515)
+}

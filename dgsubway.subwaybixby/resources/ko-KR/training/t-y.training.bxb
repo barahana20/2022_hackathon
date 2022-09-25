@@ -3,6 +3,6 @@ train (t-yn1o1rehf5hdx9a7e3ntndzk7) {
   last-modified (1663782261872)
 }
 train (t-ydac4ti2sephsr4al6rq08gz6) {
-  utterance ("[g:SubwayFour] (대구역)[v:SubwayName:대구역] (설화명곡행)[v:SubwayDir:설화명곡] (첫 차)[v:IsFirstOrLast:첫차]")
-  last-modified (1664072521128)
+  utterance ("[g:SubwayFour] (대구역)[v:SubwayName:대구역] (설화명곡행)[v:SubwayDir:설화명곡] 첫 차")
+  last-modified (1663783013827)
 }

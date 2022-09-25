@@ -10,3 +10,7 @@ train (t-z7w4p1ivdemosuoe15b5oxqey) {
   utterance ("[g:SubwayTwo_ForJunctionStations] (청라 언덕 역)[v:JunctionStations:청라언덕] (문양)[v:SubwayDir:문양] 방면 열차 언제 와?")
   last-modified (1664062944081)
 }
+train (t-zu8qj9lh6gjcn5r1n4dw9h87o) {
+  utterance ("[g:SubwayOne] (칠성시장)[v:SubwayName:칠성시장] 열차 언제 있어?")
+  last-modified (1664078491560)
+}
