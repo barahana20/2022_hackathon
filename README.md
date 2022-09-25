@@ -1,6 +1,6 @@
 # 해커톤 보고서 - [자유 세션] 대구도시철도 열차정보 Bixby Application
 
-<img src = "images/main_icon.png" width = 650px /></center>
+<img src = "images/main_icon.png" align = 'center' width = '650px'/>
 
 - 팀명
   - 대프리카김밥천국
