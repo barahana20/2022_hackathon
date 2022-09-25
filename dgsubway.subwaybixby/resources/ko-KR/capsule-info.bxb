@@ -4,12 +4,16 @@ capsule-info {
   developer-name (대프리카김밥천국)
   website-url (https://github.com/barahana20/2022_hackathon)
   icon-asset (/assets/path/to/icon.png)
-  dispatch-name(대구지하철 1호선)
+  dispatch-name(대구 지하철)
   dispatch-aliases{
     alias (대구지하철)
+    alias (대구 도시철도)
+    alias (대구도시철도)
   }
   search-keywords {
     keyword (대구지하철)
-    keyword (열차정보)
+    keyword (대구 열차정보)
+    keyword (대구지하철 열차정보)
+    keyword (대구지하철 도착정보)
   }
 }

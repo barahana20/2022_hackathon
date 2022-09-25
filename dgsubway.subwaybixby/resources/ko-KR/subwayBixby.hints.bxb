@@ -1,7 +1,7 @@
-// hints {
-//   for-category (TravelAndTransportation) {
-//     preferred-hint ("대구지하철")
-//     preferred-hint ("대구지하철 열차정보에서 ")
-//     preferred-hint ("대구 지하철")
+// hints{
+//   uncategorized{
+//     hint ("대구지하철 상인역 언제 와?"){
+//       preferred-hint ("대구지하철")
+//     }
 //   }
 // }
