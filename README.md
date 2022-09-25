@@ -35,4 +35,4 @@
     - Bixby AI 에게 많은 Training Data를 학습시켜 사용자 예상 발화를 인지함
 
 - 시연 영상
-  - 유튜브 링크
+  - 유튜브 링크 : https://www.youtube.com/watch?v=CUKjJ036K7Y
