@@ -6,3 +6,11 @@ train (t-2dcu9o0yqv2c37iv30xehyozl) {
   utterance ("[g:SubwayFour_ForJunctionStations] (청라언덕역)[v:JunctionStations:청라언덕] (문양방면)[v:SubwayDir:문양] (첫차)[v:IsFirstOrLast:첫차] 언제야?")
   last-modified (1664020663094)
 }
+train (t-2lfythkyhr70nwrh8j0s857kn) {
+  utterance ("[g:SubwayTwo] (성서산업단지역)[v:SubwayName:성서산업단지] (영남대행)[v:SubwayDir:영남대] 방면 언제 출발해")
+  last-modified (1664061452386)
+}
+train (t-2occ1dmw03uuxauhusswh1400) {
+  utterance ("[g:SubwayFour] (동대구역)[v:SubwayName:동대구] (설화 명곡)[v:SubwayDir:설화명곡] 방향 (첫차)[v:IsFirstOrLast:첫차] 언제야?")
+  last-modified (1664061549067)
+}

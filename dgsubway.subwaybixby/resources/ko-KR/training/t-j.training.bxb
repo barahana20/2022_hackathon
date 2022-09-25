@@ -10,3 +10,7 @@ train (t-jtiu5qcu7h8l4e8mjn83m0nxo) {
   utterance ("[g:SubwayOne_ForLastStations] (설화명곡역)[v:SubwayDir:설화명곡] 열차 언제 와?")
   last-modified (1663985398420)
 }
+train (t-j0ggcz5s8nn1ki7rgeqw39rm3) {
+  utterance ("[g:SubwayTwo] (안심)[v:SubwayDir:안심] 방향 (영대병원역)[v:SubwayName:영대병원] 열차 언제 와?")
+  last-modified (1664062846015)
+}

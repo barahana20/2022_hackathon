@@ -6,3 +6,7 @@ train (t-59paj44dox4ufkqi8p9t0ioei) {
   utterance ("[g:SubwayThree] (영대병원역)[v:SubwayName:영대병원] (첫차막차)[v:IsFirstOrLast:첫차막차] 시간 알려줘")
   last-modified (1663916685541)
 }
+train (t-5avwc1r1sz4c3pbm1gdeadieb) {
+  utterance ("[g:SubwayTwo_ForJunctionStations] (반월당)[v:JunctionStations:반월당] (영남대역)[v:SubwayDir:영남대] 방면 열차 언제 와?")
+  last-modified (1664061361149)
+}

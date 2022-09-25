@@ -6,3 +6,7 @@ train (t-z2eh2i02qagjohuatqs16dd7c) {
   utterance ("[g:SubwayThree_ForJunctionStations] (반월당역)[v:JunctionStations:반월당] (2)[v:SubwayLine:2]호선 (막차)[v:IsFirstOrLast:막차] 언제야?")
   last-modified (1664007062036)
 }
+train (t-z7w4p1ivdemosuoe15b5oxqey) {
+  utterance ("[g:SubwayTwo_ForJunctionStations] (청라 언덕 역)[v:JunctionStations:청라언덕] (문양)[v:SubwayDir:문양] 방면 열차 언제 와?")
+  last-modified (1664062944081)
+}
