@@ -37,10 +37,9 @@
 - 시연 영상
   - 유튜브 링크 : https://www.youtube.com/watch?v=CUKjJ036K7Y
 ## 실행방법
-먼저 빅스비가 설치되어 있는 삼성 휴대폰이 필요합니다.(아이폰 X)
-<a href="https://r1.community.samsung.com/t5/bixby/%EA%BF%80%ED%8C%81%EC%9D%BC%EA%B9%8C-%EC%95%84%EB%8B%90%EA%B9%8C-%EB%B9%85%EC%8A%A4%EB%B9%84-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%98%B5%EC%85%98-%ED%82%A4%EB%8A%94-%EB%B0%A9%EB%B2%95/td-p/1220761">빅스비 개발자 옵션 키는 방법</a>
-위 링크를 방문해 개발자 옵션을 키고
-RevisionID를 ""로 설정합니다.
+먼저 빅스비가 설치되어 있는 삼성 휴대폰이 필요합니다.(아이폰 X)  
+<a href="https://r1.community.samsung.com/t5/bixby/%EA%BF%80%ED%8C%81%EC%9D%BC%EA%B9%8C-%EC%95%84%EB%8B%90%EA%B9%8C-%EB%B9%85%EC%8A%A4%EB%B9%84-%EA%B0%9C%EB%B0%9C%EC%9E%90-%EC%98%B5%EC%85%98-%ED%82%A4%EB%8A%94-%EB%B0%A9%EB%B2%95/td-p/1220761">빅스비 개발자 옵션 키는 방법</a>  
+위 링크를 방문해 개발자 옵션을 키고 RevisionID를 ""로 설정합니다.  
 그 후 "하이 빅스비"를 통해 빅스비를 부르고 명령을 실행하면 됩니다.
 
 ## Contributor
