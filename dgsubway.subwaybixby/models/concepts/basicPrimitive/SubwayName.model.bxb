@@ -45,7 +45,7 @@ enum (SubwayName) {
   symbol (대실)
   symbol (강창)
   symbol (계명대)
-  symbol (성서산업단지)
+  symbol (성서산단)
   symbol (이곡)
   symbol (용산)
   symbol (죽전)
