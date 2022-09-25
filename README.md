@@ -14,7 +14,7 @@
 <img src = "images/play_image.png" height = 700px>  
 
 - 프로젝트에 대한 설명
-  - 저희는 알람을 맞추거나 날씨 정보를 확인할 때 "시리야", "하이 빅스비" 등 음성 인식 AI를 통해 편하게 사용합니다.
+  - 저희는 알람을 맞추거나 날씨 정보를 확인할 때 "시리야", "하이 빅스비" 등 음성 인식 AI를 편하게 활용합니다.
   - 하지만 도시철도 도착 시간을 확인하기 위해서는 '지하철종결자', '대구도시철도 앱', '네이버 지도' 등 지하철 관련 어플리케이션을 실행해 일일이 검색해 봐야한다는 불편함이 있었습니다.
   - 저희는 이러한 불편함을 해결하기 위해 삼성 빅스비 AI 응용 서비스를 개발했습니다.
   - 이제는 빅스비를 통해, __대구 시민들은 대구도시철도 열차 정보에 대해서 쉽고 편하게 확인__ 할 수 있을 것입니다.
@@ -26,9 +26,9 @@
 
 <img src = "images/development_stacks.png" height = 500px/>
 
-  - 프론트 엔드(FE) 기술 : __Bixby Platform__
-    - NodeJs 기반 JavaScript와 Bixby 언어를 활용하여, 빅스비를 통해 사용자와 소통할 수 있게 함.
-  - 백엔드(BE) 기술 : __Python Flask__, __Bixby AI__, __AWS__
+  - 프론트 엔드(Front-End) 기술 : __Bixby Platform__
+    - Node.JS 기반 JavaScript와 Bixby(.bxb) 언어를 활용하여, 빅스비를 통해 사용자와 서비스가 소통할 수 있게 함.
+  - 백엔드(Back-End) 기술 : __Python Flask__, __Bixby AI__, __AWS__
     - Python Flask Framework를 사용하여 API 서버를 구축
     - 24시간 서비스를 위해 AWS EC2 를 이용해 API 서버를 호스팅
     - 공공데이터포털에 있는 대구도시철도 각 호선 역 구간정보 파일 데이터(.csv) 와 Python Pandas Library 를 이용해, 열차가 어느 역에 언제 정차할 지 파악하여 사용자에게 서비스 제공
