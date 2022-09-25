@@ -1,9 +1,10 @@
 import console from 'console';
 import http from 'http';
 export default function subwayThree(junctionStations,isFirstOrLast, subwayLine) {
-
-  console.log('http://18.190.78.1:5001/three_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwayLine='+junctionStations['subwayLine'])
-  var response = http.getUrl('http://18.190.78.1:5001/three_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwayLine='+junctionStations['subwayLine'], { format: 'json' });
+  var url = 'http://18.190.78.1:5001/three_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwayLine='+junctionStations['subwayLine']
+  var option = { format: 'json', cacheTime: 0 }
+  console.log(url)
+  var response = http.getUrl(url, option);
   console.log(response);
   const leftFirstTime = response['leftFirstTime'];
   const leftLastTime = response['leftLastTime'];

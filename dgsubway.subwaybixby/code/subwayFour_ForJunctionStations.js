@@ -7,10 +7,10 @@ export default function subwayFour_ForJunctionStations(junctionStations,subwayDi
     subwayLine = findSubwayLine(junctionStations['subwayDir'])
   }
   var url = 'http://18.190.78.1:5001/four_forjunctionstations?subwayname='+junctionStations['junctionStations']+'&subwaydir='+junctionStations['subwayDir']+'&subwayLine='+subwayLine;
-  
+  var option = { format: 'json', cacheTime: 0}
   
   console.log(url);
-  var response = http.getUrl(url, { format: 'json' });
+  var response = http.getUrl(url, option);
   console.log(response);
   const beforeLastTrainTime = response["beforeLastTrainTime"];
   const firstTrainTime = response["firstTrainTime"];

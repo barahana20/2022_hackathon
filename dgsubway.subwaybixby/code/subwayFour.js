@@ -1,9 +1,10 @@
 import console from 'console';
 import http from 'http';
 export default function subwayFour(subwayName,subwayDir,isFirstOrLast){
-  
-  console.log('http://18.190.78.1:5001/four?subwayname='+subwayName['subwayName']+'&subwaydir='+subwayName['subwayDir']);
-  var response = http.getUrl('http://18.190.78.1:5001/four?subwayname='+subwayName['subwayName']+'&subwaydir='+subwayName['subwayDir'], { format: 'json' });
+  var url = 'http://18.190.78.1:5001/four?subwayname='+subwayName['subwayName']+'&subwaydir='+subwayName['subwayDir']
+  var option = { format: 'json', cacheTime: 0}
+  console.log();
+  var response = http.getUrl(url, option);
   console.log(response);
   const beforeLastTrainTime = response["beforeLastTrainTime"];
   const firstTrainTime = response["firstTrainTime"];

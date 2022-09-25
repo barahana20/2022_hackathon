@@ -1,11 +1,12 @@
 import console from 'console';
 import http from 'http';
 export default function subwayTwo(subwayName,subwayDir){
-  
-  console.log('http://18.190.78.1:5001/two?subwayname='+subwayName['subwayName']+'&subwaydir='+subwayName['subwayDir']);
+  var url = 'http://18.190.78.1:5001/two?subwayname='+subwayName['subwayName']+'&subwaydir='+subwayName['subwayDir']
+  var option = { format: 'json', cacheTime: 0 }
+  console.log(url);
   console.log(subwayName['subwayDir'])
   console.log(subwayName)
-  var response = http.getUrl('http://18.190.78.1:5001/two?subwayname='+subwayName['subwayName']+'&subwaydir='+subwayName['subwayDir'], { format: 'json' });
+  var response = http.getUrl(url, option);
   console.log(response);
 
   let firstArrivalTime = response['firstArrivalTime'];

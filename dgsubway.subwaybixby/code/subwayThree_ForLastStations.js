@@ -1,11 +1,12 @@
 import console from 'console';
 import http from 'http';
 export default function subwayThree_ForLastStations(subwayDir,isFirstOrLast){
-
+  var url = 'http://18.190.78.1:5001/four?subwayname='+subwayDir['subwayDir']+'&subwaydir='+oppositeStation
+  var option = { format: 'json', cacheTime: 0 }
   var oppositeStation = searchSubwayDir(subwayDir['subwayDir']);
 
-  console.log('http://18.190.78.1:5001/four?subwayname='+subwayDir['subwayDir']+'&subwaydir='+oppositeStation);
-  var response = http.getUrl('http://18.190.78.1:5001/four?subwayname='+subwayDir['subwayDir']+'&subwaydir='+oppositeStation, { format: 'json' });
+  console.log(url);
+  var response = http.get(url, option);
   console.log(response);
   const beforeLastTrainTime = response["beforeLastTrainTime"];
   const firstTrainTime = response["firstTrainTime"];
